@@ -1,27 +1,35 @@
 
-# DJANGO
-## General Request Flow:
-1. Once the user requests for something, it will go to DNS (domain naming system). 
-2. DNS will check for the corresponding Domain name or IP address. DNS will pass the request to a web server.
-3. The web server will route to the app server from there it will go to JNDI from there it will go to the connection pool where objects will be allocated to the requests. 
-4. Each request will get assigned one object. From there, objects will assist to take the data from the corresponding database.
-#### Web Server: 
+# Django Knowledge Base
+### General Request Flow:
+* Once the user requests for something, it will go to DNS (domain naming system). 
+* DNS will check for the corresponding **Domain name** or **IP address**. DNS will pass the request to a web server.
+* The web server will route to the app server from there it will go to JNDI from there it will go to the connection pool where objects will be allocated to the requests. 
+* Each request will get assigned one object. From there, objects will assist to take the data from the corresponding database.
+##### Web Server: 
 *  web server will return the response if the request is static content like HTML.
-#### App Server: 
+##### App Server: 
 The App server will consist of: 
 1. Web Container 
 2. EJB container.
 https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/Acrhitecture.jpg
 
-##### Web Container:
+###### Web Container:
 * It consists of servlets and JSP pages.
-##### EJBContainer: 
+###### EJB Container: 
 * It consists of enterprise java beans.
-* Django is a framework that is used to build apps. It uses to follow MVT model.
-M stand for Model
-V stands for View 
-T stand for Template.
+### Django
+Django is a framework that is used to build apps. It use to follow **MVT** model.
+* *M* ---> stand for Model
+* *V* ---> stands for View 
+* *T* ---> stand for Template.
+
+##### Request flow of Django:
+* Once a user submits a request it will go to the Django project it will check URLs in the project folder if it is a project-level configuration.
+* If it is an app-level configuration of URLs it will go to respective apps URLS and from there it will go to Views and from there if it is a database request it will go to Model. 
+* Model is connected with DB.
+* Anything related to static like HTML and CSS . It will go to templates and render the data in templates and then it will route to views and from there it will go to URLs and URLs will send back the data to the respective user by using HTTP response.
 ##### Django Advantages and Disadvantages:
+###### Advantages:
 1.	Implemented in Python
 2.	Better CDN connectivity and Content Management
 3.	Batteries Included Framework
@@ -29,46 +37,43 @@ T stand for Template.
 5.	Offers Rapid-development
 6.	Scalable
 7.	Security
-##### Limitations:
-* It is not suitable for smaller projects.
-#### Request flow of Django:
-1. Once a user submits a request it will go to the Django project it will check URLs in the project folder if it is a project-level configuration.
-2. If it is an app-level configuration of URLs it will go to respective apps URLS and from there it will go to Views and from there if it is a database request it will go to Model. 
-3. Model is connected with DB.
-4. Anything related to static like HTML and CSS. It will go to templates and render the data in templates and then it will route to views and from there it will go to URLs and URLs will send back the data to the respective user by using HTTP response.
+###### Limitations:
+1. It is not suitable for smaller projects.
 #### Request and Response:
 - All backend technologies and web APIs are based on one system which is The Request-Response Cycle. The system is responsible for data interchange between clients and servers. 
 - Even the new technologies based on micro-services use the Request/Response cycle.
-- Request / Response objects are transmitted over the web. Content like images, HTML, CSS, JavaScript is all Response Objects.
-- HTTP: Hyper Text Transfer Protocol is nothing but having a set of rules and standards followed by devices to transfer information via the internet.
+- Request / Response objects are transmitted over the web. Content like **images, HTML, CSS, JavaScript** is all Response Objects.
+- HTTP: **Hyper Text Transfer Protocol** is nothing but having a set of rules and standards followed by devices to transfer information via the internet.
 - Both the client and server are using HTTP. If both of them don't have the same protocol, the connection cannot be done. 
 - Just like humans need to have a common language to understand each other. In the same way, various computers and machines over the internet need to have the same protocol. At least the one through which they communicate.
-- https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/requests%20and%20response.png
+https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/requests%20and%20response.png
 
 - The requests are smaller in size than the response. A Request is a "request made by the client" to the server. Any URL that gets searched is a request.
-##### Below is the sample request:
 
-    http://localhost:8000
-1. Here HTTP is the protocol and localhost will act as a domain name and 8000 will port number.
-2. Requests are smaller compared to Responses as responses consist of HTML and CSS, JavaScipt, image, and video files.
-3. Usually, responses will be provided by the servers and the response consists of different parts.
-4. HTTP headers are used to contain various information regarding the response.
-5. We can consider that header info as Meta Data. Metadata use to tell the browser from where the request came and what type of data it contains. 
-6. Django is an application that resides in a server and its main task is to process the request received by the server then it calls the functions and provides a response.
-7. Generally, requests and responses are handled by middleware in Django.
-8. Whenever a request comes it will call security middleware first if the middleware is unhealthy it won't allow going further.
-9. If it allows the request to go further and later time Authentication middleware will come into the picture. 
-10. Authentication middleware won't know how to handle unhealthy requests.
-11. Once our request passes all the middleware it will go to the URL router, URL router simply extracts the URL from the request and it will try to match it with the request in the URLs, which we use to provide in the URL.py file.
-12. Once, we get a matching URL, the corresponding view function is called. 
-13. The view function will get various attributes and other URL parameters. 
-14. Also, the view function will be able to access files from the requests. These Requests are considered to be HttpRequest class objects.
-15. Once, the view function has been executed, it's time to give a response. 
-16. The response is given in the form of HttpResponse. 
-17. The response is not limited to that. The Response can be PDF, JSON, or CSV. That is one of the features of Django. 
-18. It provides built-in support to respond to various types.
-If the response is rendered it will look for the HTML and then the HTML file will be processed by the Django Templating Engine and the response will be sent, which consists of HTML and other static content which is requested by the requester.
-##### Cookies:
+**Below is the sample request:**
+~~~
+http://localhost:8000
+~~~    
+* Here HTTP is the protocol and localhost will act as a domain name and 8000 will port number.
+* Requests are smaller compared to Responses as responses consist of HTML and CSS, JavaScipt, image, and video files.
+* Usually, responses will be provided by the servers and the response consists of different parts.
+* HTTP headers are used to contain various information regarding the response.
+* We can consider that header info as Meta Data. Metadata use to tell the browser from where the request came and what type of data it contains. 
+* Django is an application that resides in a server and its main task is to process the request received by the server then it calls the functions and provides a response.
+* Generally, requests and responses are handled by middleware in Django.
+* Whenever a request comes it will call security middleware first if the middleware is unhealthy it won't allow going further.
+* If it allows the request to go further and later time Authentication middleware will come into the picture. 
+* Authentication middleware won't know how to handle unhealthy requests.
+* Once our request passes all the middleware it will go to the URL router, URL router simply extracts the URL from the request and it will try to match it with the request in the URLs, which we use to provide in the URL.py file.
+* Once, we get a matching URL, the corresponding view function is called. 
+* The view function will get various attributes and other URL parameters. 
+* Also, the view function will be able to access files from the requests. These Requests are considered to be HttpRequest class objects.
+* Once, the view function has been executed, it's time to give a response. 
+* The response is given in the form of HttpResponse. 
+* The response is not limited to that. The Response can be PDF, JSON, or CSV. That is one of the features of Django. 
+* It provides built-in support to respond to various types.
+* If the response is rendered it will look for the HTML and then the HTML file will be processed by the Django Templating Engine and the response will be sent, which consists of HTML and other static content which is requested by the requester.
+#### Cookies:
 * Whenever we request something it uses to take every request as new so that it causes issues like user login and authentication, these problems will be solved by cookies.
 * Cookies are small text files that are created and maintained by your browser on the particular request of Web-Server. They are stored locally by the browser, and most browsers will also show the cookies generated in the Privacy and Security settings of the browser.
 * Suppose, you are logging in to any website, that website will respond to the browser with some cookies which will have some unique identification of the user-generated by the server and some more details according to the context of the website.
@@ -77,13 +82,13 @@ If the response is rendered it will look for the HTML and then the HTML file wil
 * This process will be repeated until cookies expire or Session is closed. Post session closes cookies will auto delete by the browser itself.
 * Different websites are using different cookies depending on their requirements. In general, cookies get generated whenever we use to log in any sites are online shopping apps like Amazon and Flipkart.
 * In Django, we can create the cookies by using the below method.
-#### set_cookie():
-  * The set method has attributes like names and values.
-##### Name:
+##### set_cookie():
+ * The set method has attributes like names and values.
+###### Name:
 * It specifies the name of the cookie.
-#####  Value:
+######  Value:
 * It specifies the text or variable you want to store in the cookie.
-#####  Max_age: 
+######  Max_age: 
 * It is the period of the cookie in seconds. After the mentioned time over cookie will expire. It is an optional parameter, if this parameter we didn't give that time cookie will be active until we close the browser.
 * There few drawbacks to cookies, Cookies are not using HTTPS protocol, and cookies are plain text in nature, it is not safe to keep important info that can be easily hacked by hackers.
 * As cookies are stored in the local browser users will get the prompt to store the data or not. Many websites are sending cookies with the accept or decline promptly.
@@ -95,8 +100,8 @@ If the response is rendered it will look for the HTML and then the HTML file wil
 * In Django, we use middleware and an inbuilt app that will help you generate these session IDs.
 
 #### Cache:
-1. Caching is the process of storing the data which is recently generated so that we can use that data shortly when requested again.
-2. We can remove the cache whenever we want.
+* Caching is the process of storing the data which is recently generated so that we can use that data shortly when requested again.
+* We can remove the cache whenever we want.
 
 ##### Architecture of Django:
 https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/Architecture%20of%20django.png
@@ -115,52 +120,54 @@ https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/Architecture%20of%
 10. Import model in views by model class name.
 11. Create a static folder inside create another folder called image and then place the images required for the website here.
 12. Edit settings file with required parameters like Database and Static and Templates Installed Apps.
-###### Commands to create a Django project:
 
-
-    mkdir folder name
+Commands to create a Django project
+~~~	
+mkdir foldername
+~~~
 Go inside the folder
 
-    Django-admin startproject projectname
+	Django-admin startproject projectname
 Start the Django Project
 
-    python manage.py run the server    
-##### Create App:
+	python manage.py runserver
+    
+**Create App:**
+    
+    python manage.py startapp appname
+- init file (by seeing this we can understand the folder is a Django project.)
+- Settings file contains config settings like
+	- Apps details
+	- Middleware details
+	- Templates
+	- WSGI APP config
+	- Databases
+- urls -->It carries a URL pattern. Web pages or view URLs will configure here.
+- wsgi -->Server gateway interface àit is used to deploy our applications to online servers or cloud servers (We use this file on prod deployments)
+- manage. py-->it is useful while doing migrations 
 
-        python manage.py startapp appname
-1. init file--> by seeing this we can understand the folder is a Django project.
-2. Settings fileà It contains config settings to connect DB and Middleware
-•	Apps details
-•	Middleware details
-•	Templates
-•	WSGI APP config
-•	Databases
-3. urlsà It carries a URL pattern. Web pages or view URLs will configure here.
-4. wsgiàWeb Server gateway interface àit is used to deploy our applications to online servers or      cloud servers (We use this file on prod deployments)
-5. manage. pyàit is useful while doing migrations 
 The Default Django port number is 8000
+
 https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/Configurations%20in%20settings.png
 
  
 
-######  Configurations in the Settings file:
+**Configurations in the Settings file:**
 
     from pathlib import Path
     import os
-* import operating system is used to communicate from python to System.
-###### Build paths inside the project like this: 
+<!--import operating system is used to communicate from python to System.-->
+
+**Build paths inside the project like this:** 
+
     BASE_DIR / 'subdir'.
     BASE_DIR = Path(__file__).resolve().parent.parent`
-* In the above field, BASE_DIR will take the absolute path of the project.
- ~~~
+<!--In the above field, BASE_DIR will take the absolute path of the project.-->
 
     DEBUG = True
-~~~
-* We should not use this option in production as
-~~~
 
     INSTALLED_APPS = [
-
+    
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -170,13 +177,13 @@ https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/Configurations%20i
     "app1",
     
     ]
-~~~
+   
+
  * We have to add created app name in the settings.py file ->Installed Apps.
-In the above example, we have added "app1" which we created earlier.
+* In the above example, we have added "app1" which we created earlier.
 ##### MIDDLEWARE:
 * It is a frame or a plugin that takes an incoming request and manipulates it (makes some required changes) and sends it to the view.
 * It can also work on templates like once the view process everything and middleware can manipulate and process and send it back to views. 
-
 
 ~~~
 MIDDLEWARE = [
@@ -189,7 +196,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 ~~~
-###### Security Middleware(Django.middleware.security.SecurityMiddleware) : 
+###### Security Middleware(Django.middleware.security.SecurityMiddleware) : ###### 
 * It is responsible for HTTPS or SSL support and other security features.  
 ###### Session Middleware (django.contrib.sessions.middleware.SessionMiddleware) :
 * It helps us to manage the sessions, it is responsible for taking the incoming request and making sure if the session is active and the response goes to the web browser that time cookies will be created.
@@ -198,14 +205,15 @@ MIDDLEWARE = [
 * It works on URLs; it checks any forward slash at the end of the URLs if any issues with that it will resolve them.
 ###### CSRF Middleware(Django.middleware.csrf.CsrfViewMiddleware):
 * If the form is submitted it checks for a CSRF token if that is not there it will throw an error.
-##### AuthenticationMiddleware(django.contrib.auth.middleware.AuthenticationMiddleware) :
+###### AuthenticationMiddleware(django.contrib.auth.middleware.AuthenticationMiddleware) :
 * Authentication middleware is responsible for authenticating the end user request. It will also make sure there is an object available for the views and the template once the authentication happens.
 
 * Above is the default middleware which is provided by Django. We won't change this existing middleware. We will create our custom middleware to interrupt the incoming request and do some changes depending on the requirements like encrypt or zip.
-##### How to create custom middlewares:
+###### How to create custom middlewares:
 * __init__,  __call__ are mandatory inbuilt methods in every middleware which we are creating.
 process_view, process_exception, and process_template_response methods are inbuilt optional while creating our custom middleware. In the below example, we are explaining how we can declare these methods in a class.
-###### Example:
+
+**Example:**
 ~~~
 MyMiddleware
 	__init__(self,get_response)
@@ -216,8 +224,8 @@ MyMiddleware
 ~~~
 	
 Once view sends the request,
-1. First, it will call __to init__ method and it will go to" Security Middleware", Once it is done it will point to the next middleware "Session Middleware". Once Session Middleware did it will point to Common Middleware,
-2. After Common Middleware it will points to CSRF Middleware finally it will go to Authentication Middleware.
+1. First, it will call __to init__ method and it will go to **" Security Middleware"**, Once it is done it will point to the next middleware **"Session Middleware"**. Once Session Middleware did it will point to **Common Middleware**.
+2. After **Common Middleware** it will points to **CSRF Middleware** finally it will go to **Authentication Middleware.**
 3. Once all the above middleware gets complete Django will hand over the request to view itself.
 __call__ method is invoked before it calls the next method or after the response is processed and just before the response goes back to the client.
 ##### Process_view: 
@@ -228,7 +236,7 @@ Within this method, we will add extra logic like unzip, zip, Encrypt, Decrypt
 ##### Process_template_response: 
 * This method will be invoked just before the template response is sent to the client it has access to request and response.
 ##### Creation of Middleware:
-create a file with middleware.py and write a class with required methods like __init__.
+- create a file with middleware.py and write a class with required methods like __init__.
 ~~~
 Class Middlewarelife:
 	def  __init__(self,get_response):
@@ -240,7 +248,8 @@ Class Middlewarelife:
 		return response
 ~~~
 * Custom middleware that we have created will be configured at the end of the middleware section in the security.py file. After this middle, if there is any other middleware, the request will go to that (get response points to the next middleware). if the created customized middleware is the last in the settings file, it will go to the view itself.
-##### Exception handling exception:
+
+**Exception handling exception:**
 	
 
 ~~~
@@ -273,15 +282,16 @@ DATABASES = {
 
 * If you want to use the default database as your database then we no need to perform any modifications. If not, we can specify our database and we can mention the DB name below.
 
-###### Example: 
+**Example:** 
 
-~~~'ENGINE': 'django.db.backends.Mysql',
+~~~
+'ENGINE': 'django.db.backends.Mysql',
         'NAME': 'tejesh',
         'USERNAME': 'root',
         'PASSWORD':'Admin@123'
 ~~~
 
-##### Static:
+**Static:**
 
     STATIC_URL = 'static/'
     STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
@@ -309,36 +319,37 @@ DATABASES = {
 5. Create Models 
 6. Create Views 
 7. CRUD operations on tables using ORMS
-##### Example program:
+
+**Example program:**
 ~~~
 Settings.py:
 from pathlib import Path
 import os
 ~~~
 
-#####   Build paths inside the project like this: BASE_DIR / 'subdir'.
+<!--**Build paths inside the project like this: BASE_DIR / 'subdir'.**-->
 
     BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-#####   Quick-start development settings - unsuitable for production
+<!--**Quick-start development settings - unsuitable for production**-->
 
     See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-#####  SECURITY WARNING: 
-##### keep the secret key used in production secret!
+SECURITY WARNING: 
+keep the secret key used in production secret!
 
     SECRET_KEY = 'django-insecure-=m-32%_g@agdwr=ji2u!!ls+90d#vdg@tcur7i0#++j^zvf6%c'
 
-####  SECURITY WARNING:
-don't run with debug turned on in production!
+SECURITY WARNING:
+<!--don't run with debug turned on in production!-->
 
     DEBUG = True
 
     ALLOWED_HOSTS = []
 
 
-####  Application definition
+Application definition
 ~~~
 
 INSTALLED_APPS = [
@@ -383,8 +394,8 @@ WSGI_APPLICATION = 'freedom.wsgi.application'
 ~~~
 
 
-# Database
-#####   https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+**Database**:
+ **https://docs.djangoproject.com/en/4.1/ref/settings/#databases**
 ~~~
 
 DATABASES = {
@@ -397,10 +408,9 @@ DATABASES = {
 }
 ~~~
 
+**Password validation:**
 
-###  Password validation:
-
-######  https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-valdators
+**https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-valdators**
 
 ~~~
 
@@ -421,8 +431,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ~~~
 
 
-### Internationalization
-######  https://docs.djangoproject.com/en/4.1/topics/i18n/
+**Internationalization**
+**https://docs.djangoproject.com/en/4.1/topics/i18n/**
 ~~~
 
 LANGUAGE_CODE = 'en-us'
@@ -435,26 +445,23 @@ USE_TZ = True
 ~~~
 
 
-#####  Static files (CSS, JavaScript, Images):
-######  https://docs.djangoproject.com/en/4.1/howto/static-files/
+**Static files (CSS, JavaScript, Images):**
+**https://docs.djangoproject.com/en/4.1/howto/static-files/**
 ~~~
-
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 ~~~
 
-
-####  Default primary key field type:
-######  https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+**Default primary key field type:**
+**https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field**
 ~~~
-
 DEFAULT_AUTO_FIELD = 'Django.db.models.BigAutoField'
 Views:
 from Django. shortcuts import render
 from a fighter. models import Employee
 ~~~
-
-####  Create your views here:
+**views.py**
+<!--Create your views here:-->
 ~~~
 def bose(request):
     myDict={"Name":"Tejesh"}
@@ -477,10 +484,10 @@ def deleteEmp(request,id):
     return redirect('/')
 ~~~
 
+
+HTML file1:
 ~~~
-
-
-HTML file1:jsp.html
+jsp.html
 HTML in Templates
 <!DOCTYPE html>
 <html lang="en">
@@ -533,8 +540,9 @@ HTML file 2: create.html
 </body>
 </html>
 ~~~
+
+**Form.py**
 ~~~
-Form:
 from Django import forms
 from fighter.models import Employee
 class EmployeeForm(forms.ModelForm):
@@ -542,13 +550,14 @@ class EmployeeForm(forms.ModelForm):
         model=Employee
         fields='__all__'
 ~~~
+
+**Admin.py**
 ~~~
-Admin.py
 from Django. contrib import admin
 from fighter.models import Employee
 ~~~
 
-####  Register your models here:
+**models.py**
 ~~~
 class EmployeeAdmin(admin.ModelAdmin):
     list_display = ['firstName','Lastname,'sal']
@@ -556,7 +565,7 @@ class EmployeeAdmin(admin.ModelAdmin):
 admin.site.register(Employee,EmployeeAdmin)
 ~~~
 
-### URLS:
+**url.py**
 ~~~
 from Django.contrib import admin
 from Django.URLs import path
@@ -565,22 +574,16 @@ URL patterns = [
     path('admin/', admin.site.urls),
     path('p/', views.bose),
     path('q/',views.emp)
-
-
 ]
 ~~~
+
 https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/Empt%20list.png
+
 https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/Create%20Employee1.png
+
 https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/Create%20Employee2.png
+
 https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/Add%20Employee.png
-
- 
- 
- 
- 
-
-
-
 
 1. In the above example we have created a database called empdb, and the required fields of the database like first name and last name, sal, and email, we have placed in the class of models.py file.
 2. We have written a function in views to get all objects in the model and render with empdb.
@@ -603,7 +606,7 @@ After HTML now it's time to create views for the delete operation.
 
 
 ### ORM:
-Django lets us interact with its database models, i.e. add, delete, modify and query objects, using a database-abstraction API called ORM (Object Relational Mapper). This article discusses all the useful operations we can perform using Django ORM.
+Django lets us interact with its database models, i.e. add, delete, modify and query objects, using a database-abstraction API called ORM **(Object Relational Mapper)**. This article discusses all the useful operations we can perform using Django ORM.
 For demonstration purposes, we will use the following Django models.
 Example1:
 ~~~
@@ -639,13 +642,11 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-
-    class Cart(models.Model):
+class Cart(models.Model):
         user_id = models.ForeignKey(User, on_delete=models.CASCADE)
         product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
 
-
-    class Order(models.Model):
+class Order(models.Model):
         user_id = models.ForeignKey(User, on_delete=models.CASCADE)
         billing_address = models.CharField(max_length=50)
         delivery_address = models.CharField(max_length=50)
