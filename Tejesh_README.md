@@ -311,7 +311,8 @@ DATABASES = {
 * We are going to develop the operations in the same order.
 * The majority of applications on the internet are CRUD applications
 * CRUD operations on function-based views.
-* Creating a new project to perform CRUD operations.
+
+**Creating a new project to perform CRUD operations:**
 1. creation of a virtual environment.
 2. Install Django
 3. Create the Django project
