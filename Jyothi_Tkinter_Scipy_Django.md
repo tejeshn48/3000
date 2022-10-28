@@ -400,3 +400,139 @@ Django is installed using pip,with this command:
 * Django-admin startproject new project
 * An app is a web application that has a specific meaning in your project, like a homepage
 * Django works on MVT architecture.
+* Let's see 
+* ##### M – Model
+  
+##### Models: 
+* In Django, a model is a class used to contain essential fields and methods. each  field of the model class maps to a single in the database field
+* The model is defined in the Models.py file. This file can contain multiple models
+* .an example here, we are creating a model Employee which has two fields first name and last name.
+##### For example:
+* From Django.db import modules
+
+Class employee(models.model):
+               First-name=models.charField(max-length=50)
+               Last-name=models.charfield(max-length=40)
+               
+The first name and last name fields are specified as class attributes and each attribute maps to a database column.
+##### Django views:
+* Django views are python functions that take http requests and return http responses like HTML documents.
+* Views are usually put in a file called views.py located in your app's folder.
+* There is views.py in your folder that looks like these
+All the view functions are created inside the views.py file of the Django app.
+##### Django view example:
+Import datetime  
+ Create your views here.  
+from django.http import HttpResponse  
+def index(request):  
+ now = datetime.datetime.now() 
+    html =”<html><body><h3>nowtimeis%s.</h3></body></html>” % now  
+Return HttpResponse(html)    # rendering the template in HttpResponse  
+* First, we will import the datetime library that provides a method to get current data and time and http response.
+* Next, we defined a wave function index that takes HTTP requests to respond back
+* View calls when get mapped with URL in urls.py for example
+* Path(“index\”views.index),
+
+   
+##### Django Returning Errors:
+ Django provides various built-in errors classes that are the subclass of Httpresponse and are used to show error massage as HTTP response. some classes are list is below
+ 
+class HttpResponseNotModified: It is used to designate that a page hasn't been modified since the user's last request (status code 304).
+
+Class HttpBadRequest: It acts just like HttpResponce but with a 400 status code
+class HttpResponseNotFound: It acts just like HttpResponse but uses a 404 status code.
+
+Class HttpResponseNotAllowed:it acts just like HttpResponse but uses a 410 status code.
+
+HttpResponseServerError: It acts just like HttpResponse but uses a 500 status code.
+
+###### Django Templets:
+Django provides a convenient way to generic dynamic HTML pages by using a template system
+##### Why Django Template?
+* an HTML file, we can't write python code because the code is only interpreted by a python interpreter not the browser. 
+* We know that HTML is a static markup language, while Python is a dynamic programming language.
+* The Django template engine is used to separate the design from the python code and allows us to build dynamic web pages.
+##### Django project:
+* If we want to create a Django project, we have to use some commands.
+* django-admin startproject projectName
+* A New Folder with the name project name will be created. In that folder, we have managed.
+* Django creates a new project. then run the above command display like this:
+
+##### App creation:
+In these previous to learn how to create a new project and now let’s go with app creation:
+
+Django application consists of a project and an app. the difference between a project and an app is, a project is a collection of inserted files. and apps web application which is written to perform business logic.
+ 
+To create an app we can use this command
+Py .\manage.py startapp appname
+##### For example, 
+I am taking an app name “pen” let's go with it to create an app we can use this command.
+Py .\manage.py startapp pen
+Run this command to create an app 
+
+
+ * Now let’s create an app, we have to use this command
+Python manage.py startapp appname
+Manage.py is like a web server
+
+
+  
+##### App is created
+* Now let’s open the terminal .go to setting open the new project name and then select it. now open the new page.
+*First, we need models to write class .before we go with settings
+Open settings.py it will show some installed apps now let’s go and add the app name
+* Now let's model. open model.py shows create your model here then start to write a class 
+* For example to create an employee class now write the employee class
+* Class employee(models.Model):
+       eno = models.IntegerField()
+        ename =models.CharField(max-length=30)
+       esal = models.FloateField()
+       eaddr=models.CharField(max-length=20)
+
+* ü Model. Model is inheritance
+* ü charField has differently max-length
+* To convert python to the database we need to SQL.so we need to go to terminal
+* Now we have the interpreter let’s go to interpreter settings. enter the virtualenv and scripts and pythonex
+* To convert python to the database we need these commands
+*  To check the shell use these commands
+* Py \manage.py\shell
+*  Using the above command we enter the shell
+* Next command – from Django.db import connection
+* C=connection.cursor()
+* Exit() these function use exit the shell.
+* Check the shell next we want the makemigration to use these command
+* Py manage.py makemigration 
+* The above command is used to convert a python file into a database file in SQL.
+* Now let's create the table we need these command
+* Py \mange.py migrate
+* To enter the above command tables are created.
+* Run the run server before we need the create superuser
+* To create a superuser we use these command
+* Py \manage.py createsuperuser
+* Ask the same basic questions let's answer these questions
+* Name= your name
+* Password = create a password 
+* Mail = mail is not mandatory
+* We enter the name and password. we have superuser
+* Then create a superuser after we will go run the run server
+* Run the run server we want to these commands
+* Py \manage.py runservar
+* Enter the above code then open a small URL.
+* Double-click the URL code we entered on the welcome page like this:
+  
+* Enter the admin it returns like this
+  
+* Previously we already create a username and password we will add the Django administration page
+* We go for registration of your project lets open the admin.py can write the below command
+* Open the Django administration we can add some other persons' details also.
+* You can see the all persons details now let’s go to models .py to write a function called the dander method.
+* For example:
+def –str—(self):
+      self.name
+* Using these functions we can see all employees' names.
+* We want to all information about employees we can go admin.py .to write a class
+#### For example
+* Class EmployeeAdmin(admin.ModelAdmin):
+        List-display = [‘Id’,’ename’,’esal’,’eaddr’]
+* Admin.site.register(Employee,EmployeeAdmin)
+* We can run the class we have URL and double click the URL we entered the URL welcome page and add admin we see the employee option then click the option we have all information about all employees.
