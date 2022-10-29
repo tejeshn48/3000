@@ -193,7 +193,8 @@ Shankar is open to setting in:Shankar
 
 Import I Django From Django http import HTTP Response 
 This means in HTTP is capital letters 2nd HTTP And creating in function anything Def display (request) :
-Return HTTPResoponce <h1>shankar<h2> : 
+Return HTTPResoponce shankar : 
+   
 Shankar’s name is created in the app name
 
 And then moved on next URLs:
