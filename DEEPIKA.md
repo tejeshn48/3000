@@ -543,23 +543,12 @@ First, you know the basic Html and go to requests-Html.
 
 ### Html tags:
 
-- <html>root element.
-- <head>meta information.
-- <title>title of the Html page.
-- <body>container (content of the Html page).
-- <h1>,<h2>, <h3>, <h4>, <h5>, <h6> (h1 large heading then compared to h2 it decreases the size one by one).
-- <p>paragraph.
-
 Element is defined by starting tag, some useful information, and an ending tag.
 ~~~
 <starting tag> useful information. . .. <ending tag>
 ~~~
 Some Html elements do not have any content. These elements are called empty elements in Html. An empty element does not have any end tag.
-- <br>line break.
 - < >this is anchor brackets.
-
-In between anchor brackets, we can write Html tags.
-<head> -- this is the opening tag Html content</head> -- this is the closing tag in front of they have forward slash. These tags can also be nested in Html.
 
 ### Requests-html:
 
