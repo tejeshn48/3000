@@ -1,20 +1,20 @@
 #                                     MULTITHREADING
-### THREADS:
+##### THREADS:
 1.  A thread is a separate flow of execution. This means that your program will have two things happening at once.
 2. The threads may be running on different processors, but they will only be running one at a time.
 3.	Threads allows a program to operate more efficiently by doing multiple things at the same time.
 4.	Threads can be used to perform complicated tasks in the background without interrupting the main program.
 5.	Threads sometimes called light-weight processes and they do not require much memory.
- ### MULTI TASKING: 
+ #####  MULTI TASKING: 
  Executing several tasks simultaneously.
-#### Example:
+#####  Example:
 In Our Class Room: we are doing browsing, program executions, writing Notes, listening class, Checking Mobiles, Discussing some topics etc.…
 * They are two types of multi taskings:
 1. Process based multitasking.
 2. Thread based multitasking.
-##	Process based multitasking:
+##### Process based multitasking:
 It is one type of multitasking. It executes several tasks simultaneously. Each task is separate independent process. This type of multitasking is called process-based multitasking.
-#### Example:
+#####  Example:
 1.Browsing something in system.
 2.Downloading some files from the browser.
 3.Listening songs in the same system.
@@ -26,29 +26,32 @@ Thread based have an only one process with in the process of multiple parts are 
  #### Example:
 https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-d8fb054fd644bcd3b7cf8be51e6fb9c6e696eb84bd36888f6c07f3bb983814d4
 
- 
-
 1.process means with in the same program multiple threads by default consider as process-      based multitasking.
 2.Thread means an independent part of a program.it is python object. every thread has independent job is available. 
-####  MULTITHREADING IN PYTHON:
+#####   MULTITHREADING IN PYTHON:
 Multithreading is defined as the ability of a processor to execute multiple threads in simultaneously. In Python, or any programming language, a thread is used to execute a task where some waiting is expected. So that the main program does not wait for the task to complete, but the thread can take care of it simultaneously
 Like:https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-0d08851287a74858d3e2899860f1eea
  
 ##### Program on multithreading:
-
-~~~
-
 Create a thread:
+~~~
 Import threading
+
 Class Thread:
+
 def run(self):
+
 print (thread function)
+
 for x in range (3):
+
 t= Thread ()
+
 ~~~
 
 start a thread:
-A thread is started by applying start () method on the thread object.
+
+* A thread is started by applying start () method on the thread object.
 ~~~
 from import threading   *
 import time
@@ -60,7 +63,9 @@ time. Sleep ()
 s1=Hello ()
 s1. start
 ~~~
+
 output:
+
 ~~~
 Hello
 Hello
