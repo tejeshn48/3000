@@ -165,7 +165,7 @@ Used by extending thread class to create a thread using only two functions that 
     hello
 * 	In the above program create a class with the name Example then define a function with function name B, self is the default parameter in the python.
 In this function we have given a list of elements to print the child thread one after one by using for loop. following that creating object with class name then creating a thread by inheriting the threading class as specified by object. B start () function used to execute the thread and join () function is used to wait the executing the finishing the child thread. output of this program should be child thread with the elements one after another. After that it is going to main thread then print the print statement hello.
-### #ADVANTAGES OF MULTI THREADING:
+### ADVANTAGES OF MULTI THREADING:
 •	Enhance the performance and by decreasing the development time.
 •	Simultaneously and parallelised occurrences in the tasks.
 •	Use CPU resources in better manner.
