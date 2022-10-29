@@ -8,10 +8,15 @@ WxPythons
 By using Tkinter now I am going to write a GUI application
 
  import tkinter
+ 
  from tkinter import *
+ 
  root = Tkinter.Tk()
+ 
  root.title("tk")
+ 
  root.mainloop()
+ 
 Output:
                     
  
@@ -26,10 +31,15 @@ tkinter.Tk() to assign  root variable.
 To change the small size of the application I need to run one more code which is below.
 
 import tkinter
+
 from tkinter import *
+
 root = tkinter.Tk()
+
 root.title("demo")
+
 root.geometry(“600x600”)
+
 root.mainloop()
 
 If I run the above code it will increase the size of the application                                                                    
@@ -38,26 +48,40 @@ After writing code for the application and title and increasing the size of the 
 ## Label creation:
 
 Import tkinter
+
 from tkinter import *
+
 root = tkinter.Tk ()
+
 root.title ("demo")
+
 root.geometry(“600x600”)
+
 label=tkinter.Label(root,text=”hii”).pack()
+
 root.mainloop()
 
 If I run the above code it will create a label for the application.
 
 After creating a label now create a button.
-## Button creation:
+#### Button creation:
 
 Import tkinter
+
 from tkinter import *
+
 root = tkinter.Tk ()
+
 root.title ("demo")
+
 root.geometry(“600x600”)
+
 label=tkinter.Label(root,text=”hii”).pack()
+
 b =Button(root,text=”subscribe”,bg=”orange”, fg=”red”)
+
 b.grid(column=1,row=0)
+
 root.mainloop()
 
 after b= must use start with capital “B”
@@ -70,17 +94,28 @@ I used a word called GRID in code to place various buttons in various places in 
 If I run the above code it will create a button for the application.
 
 After creating a button now let's go to create the radio button
-## radio button
+
+#### radio button
 Import tkinter
+
 from tkinter import *
+
 root = tkinter.Tk ()
+
 root.title ("demo")
+
 root.geometry(“600x600”)
+
 label=tkinter.Label(root,text=”hii”).pack()
-b =Button(root,text=”subscribe”,bg=”orange”, fg=”red”)
+
+b =Button(root,text=”subscribe”,bg=”orange”,fg=”red”)
+
 b.grid(column=1,row=0)
+
 r =Radiobutton(root,text=”python”,value=1)
+
 r.grid(column=2,row=1
+
 root.mainloop()
 
 If I run the above code it will create a radio button for the application 
@@ -90,142 +125,216 @@ Button – the button is used to add various kinds of a button to the python app
 
 Import tkinter
 from tkinter import *
+
 root = tkinter.Tk ()
+
 root.title ("demo")
+
 root.geometry(“600x600”)
+
 label=tkinter.Label(root,text=”hii”).pack()
+
 b =Button(root,text=”subscribe”,bg=”orange”, fg=”red”)
+
 b.grid(column=1,row=0)
+
 r =Radiobutton(root,text=”python”,value=1)
+
 r.grid(column=2,row=1)
+
 r1 =Radiobutton(root,text=”python”,value=1)
+
 r1.grid(column=2,row=2)
+
 r2 =Radiobutton(root,text=”python”,value=1)
+
 r2.grid(column=2,row=3)
+
 root.mainloop()
+
   
 
 If I run the above code it will create multi-radio buttons for the application
- I used a word called GRID in code because to place various buttons in various places in the application where they are required 
+I used a word called GRID in code because to place various buttons in various places in the application where they are required 
 
 Previously I created a multi-radio button now I gave a code to create an entry
-#  entry button creation
+
+#### entry button creation
  t =Entry(root,width=10)
+ 
  t.grid(column=3,row=0)
+ 
 If I run the above code it will create an entry application
 
 
+
 # create a message box 
+
 I used toPreviously I created an entry button on this application now I gave code to create a message box. these function
 
- Import tkinter
- from tkinter import *
- from tkinter import messagebox
- def button1():
+Import tkinter
+
+from tkinter import *
+
+from tkinter import messagebox
+
+def button1():
+
+   messagebox.showinfo(“status”,” plz subscribe”)
    
-messagebox.showinfo(“status”,” plz subscribe”)
 b=button(root,text=”python life”,command=Buttons)
+
 b.pack()
+
 I used a function called pack(). which will pack the information and keep it. 
 after creating a bottom box on this application like the below picture
-
-  
 
 Previously I created a message box now I gave code to create a combo box
 
 ## Combo box creation:
 
-
 import tkinter as tk
+
 from tkinter import ttk
+
 root = tk.Tk()
+
 root.title("combobox")
+
 root.geometry("600x600")
+
 ttk.Label(root,text="python life",background="blue" ,foreground="white",)
+
          
 font=("Times new roman",15)).grid(row=0, =1)
- combo box
- n = tk.StringVar()column
- course=ttk.Combobox(root,width=27,textvariable=n)
+
+#### combo box
+
+n = tk.StringVar()column
+
+course=ttk.Combobox(root,width=27,textvariable=n)
+
 course["values"]=("python" "Django", "machine learning")
+
 course.grid(column=1,row=5)
+
 course.current()
+
 root.mainloop()
 
 If I run above the code it will create a combo box.
 
 Previously I created a combo box now I gave code to create a scrolling test
 
-## scroll test creation:
+#### scroll test creation:
 
 import tkinter as tk
+
 from tkinter import ttk
+
 from tkinter import scrolledtext
+
 root = tk.Tk()
+
 root.title("scrolledtext")
+
 root.geometry("600x600")
+
 ttk.Label(root,text="python life",background="blue" ,foreground="white",
          
 font=("Times new roman",15)).grid(row=0,column=1)
+
 text1=scrolledtext.ScrolledText(root,wrap=tk.WORD,width=40,height=10)
+
 text1.grid(column=0,pady=10,padx=10)
+
 text1.focus()
 
 root.mainloop()
+
 By using Tkinter I prepared a small project which is as below.
 
-# demoproject:
+#### demoproject:
 
 from tkinter import*
+
 from tkinter import messagebox
+
 def ok():
+
     uname=el.get()
+    
     password =e2.get()
+    
 if(uname=”” and password=””):
+
   
 messagebox.showinfo(“,”Blank not allowed”)
+
 elif(uname==”admin”and password==”123”):
-               messagebox.showinfo(“,”login success”)
+
+       messagebox.showinfo(“,”login success”)
+       
                root.destroy()
 else:
-               messagebox.showinfo(“,” incorrect user name and password”)
+       messagebox.showinfo(“,” incorrect user name and password”)
+       
 root=Tk()
-root.tittle(“login”)
-root.geometry(“300x200”)
-global e1
-global e2
-label(root,text=”username”).place(x=10,y=10)
-label(roo,text=”password”).place(x=10,y=40)
-e1=Entry(root)
-e1.place(x=140,y=10)
-e2=Entry(root)ss
-e2.place(x=140,y=40)
-e2.config(show=””)
-button(root,text”login”,command=ok,height=3,width=13).place(x=10,y=100)
-root.mainloop()
-#     Scipy
-### What is scipy
-Scipy is a scientific computation library scipy uses under Numpy.
-Scipy stands for scientific python
-Like NumPy,scipy is open source so we can use it freely
-Scipy was created by Numpy creator Travis oliphant
 
-Which language is scipy written In
-Scipy is primarily written in python. but few segments are written in C
+root.tittle(“login”)
+
+root.geometry(“300x200”)
+
+global e1
+
+global e2
+
+label(root,text=”username”).place(x=10,y=10)
+
+label(roo,text=”password”).place(x=10,y=40)
+
+e1=Entry(root)
+
+e1.place(x=140,y=10)
+
+e2=Entry(root)ss
+
+e2.place(x=140,y=40)
+
+e2.config(show=””)
+
+button(root,text”login”,command=ok,height=3,width=13).place(x=10,y=100)
+
+root.mainloop()
+
+                                                                   # Scipy
+#### What is scipy
+
+* Scipy is a scientific computation library scipy uses under Numpy.
+* Scipy stands for scientific python
+* Like NumPy,scipy is open source so we can use it freely
+* Scipy was created by Numpy creator Travis oliphant
+
+#### Which language is scipy written In
+* Scipy is primarily written in python. but few segments are written in C
 
 ### Installation of scipy
-If you have python and pip already installed on a system, then installation of scipy is very easy.
-If we can install this scipy using this command
-C:\user\your name\pip install scipy
-Import scipy
-Once install scipy then use the import scipy module
-You went to use in your application by adding “fromscipy import module”:
-Syntax:  from scipy import Constance
-If you have imported Constance from scipy, the application will be ready to use it.
-For example:
+
+* If you have python and pip already installed on a system, then installation of scipy is very easy.
+* If we can install this scipy using this command
+##### C:\user\your name\pip install scipy
+* Import scipy
+* 
+* Once install scipy then use the import scipy module
+* 
+* You went to use in your application by adding “fromscipy import module”:
+* 
+#### Syntax:  from scipy import Constance
+* If you have imported Constance from scipy, the application will be ready to use it.
+##### For example:
 * How many cubic meters are  in one  liter
-From scipy import Constance
-Print(constants.liter)
+* From scipy import Constance
+* Print(constants.liter)
 o\p: 1 liter=0.0001
 
 Firstly import the module from scipy with constant then print the constants. liter. It will show the cubic meters in one liter
@@ -233,31 +342,43 @@ Firstly import the module from scipy with constant then print the constants. lit
 Constants: scipy offers a set of mathematical constants, one is “liter” which returns 1 liter as cubic meters
 
 #### How to check the scipy version in python
-The scipy version is a string to store under the _version_attribute.
-Example: version of scipy
-Import scipy
-Print(scipy._version_)
+* The scipy version is a string to store under the _version_attribute.
+* 
+##### Example: version of scipy
+* Import scipy
+* Print(scipy._version_)
        o\p: it will be shown the latest version of scipy
 Firstly we can import scipy module and then print the scipy._version_ .it will show the latest version of scipy
 
 #### Scipy constants:
 Scipy is more focused on scientific implementation, it also built-in scientific
+
 #### constants
 These constants can be useful when you are working with data science
 * Example: print the constant value of PI
 
 From scipy import constants
+
 Print(constants.PI)
+
 o\p:3.141492….
+
 Firstly import module scipy with constant. than print constant.PI otherwise it will return the constant value of PI
+
 ##### Constant unit : 
 A list of all units under the constant module can be using the dir() function
-Example: 
+
+##### Example: 
 list of all constants
+
 From scipy import constants
+
 Print(dir(constants)
+
 Firstly import module scipy with constants .than print dir, constants.   it returns the list of all constants
+
 #### Scipy sparse data
+
 ##### What is sparse data:
  
 * Sparse data is data that has mostly unused elements.
@@ -267,11 +388,16 @@ Firstly import module scipy with constants .than print dir, constants.   it retu
 * Sparse data is data  in which  values are zero
 * Dense array: a data in which values are not equal to zero. This is 
 * It is totally the opposite sparse data.
+* 
 ##### How to use sparse:
+
 Scipy has a module,scipy. sparse that provides functions to deal with sparse data
 There are two types of sparse matrices:
+
 1 CSC
+
 2 CSR
+
 CSC: CSC stands for the compressed sparse column. Csc efficiently arithmetic, fast column slices.
 CSR: CSR stands for the compressed sparse row.
 
@@ -279,13 +405,17 @@ CSR: CSR stands for the compressed sparse row.
 * Scipy is a python library used to solve scientific and mathematical problems
 * Built on Numpy
 * Allows manipulation and visualizing
+* 
 #### What is scipy:
+
  scipy is very popular library in python
 Scipy is a free and open source python library used for scientific computing and technical computing
 
 It is a collection of mathematical algorithms and convenience functions built on the Numpy extension of python.
 It adds significant power to the interactive python session by providing the user with high-level commands and classes for manipulating and visualizing data.
+
 ##### Installing scipy:
+
 Install scipy using pip
 We can install the scipy library by using the pip command
 Pip is a recursive acronym that stands for “pip installs packages “.
@@ -309,12 +439,12 @@ Scipy. cluster: cluster algorithms are used to vector quantization /k means
 * Scipy. waves: it is a tool for writing
 
 Here we will see how to implement the K-means clustering algorithm which is one of the popular clustering algorithms.
- The k-means algorithm adjusts the classification of the observations into clusters and updates the cluster centroids until the position of the centroids is stable over successive iterations.
+The k-means algorithm adjusts the classification of the observations into clusters and updates the cluster centroids until the position of the centroids is stable over successive iterations.
 * SymPy is a symbolic mathematics library while SciPy is a numeric mathematics library.
 *  SciPy does not understand anything to do with SymPy's symbols and it will only work with numeric values such as floats.
 *  Sympy is a Python library for symbolic mathematics. It aims to become a full-featured computer algebra system (CAS) while keeping the code as simple as use
 
-# Django
+ # Django
 * To understand Django before you know python
 * Django is a web framework.
 ##### Framework:
@@ -484,10 +614,15 @@ Open settings.py it will show some installed apps now let’s go and add the app
 * Now let's model. open model.py shows create your model here then start to write a class 
 * For example to create an employee class now write the employee class
 * Class employee(models.Model):
+* 
        eno = models.IntegerField()
-        ename =models.CharField(max-length=30)
+       
+       ename =models.CharField(max-length=30)
+       
        esal = models.FloateField()
+       
        eaddr=models.CharField(max-length=20)
+       
 
 * ü Model. Model is inheritance
 * ü charField has differently max-length
