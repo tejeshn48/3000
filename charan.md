@@ -141,7 +141,7 @@ process_view (self,request,view_kwargs) process_exception(self,exception) proces
 #### Activating Middleware
 To activate middleware, add it to the MIDDLEWARE list of the settings.py file.
 ~~~
-##### MIDDLEWARE = 
+ MIDDLEWARE = 
 [
 'django.middleware.security.SecurityMiddleware',  
 'django.contrib.sessions.middleware.SessionMiddleware',  
