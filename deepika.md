@@ -509,7 +509,7 @@ By using the post method, we can send some data to the server. The get and post 
 
 The post method carries request attributes in the message body. The post-request method doesn't have any restrictions to store the length of the data.
 
-### Example:
+**Example:**
 
 ~~~
 import requests
