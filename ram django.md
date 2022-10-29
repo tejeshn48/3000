@@ -191,16 +191,16 @@ You have 18 unapplied migration(s). Your project may not work properly until you
 Shankar is open to setting in:Shankar
 *And then next views:
 
-Import I Django From Django http import HTTP Response ; 
+Import I Django From Django http import HTTP Response 
 This means in HTTP is capital letters 2nd HTTP And creating in function anything Def display (request) :
-Return HTTPResoponce <h1>shankar<h2> ; 
+Return HTTPResoponce <h1>shankar<h2> : 
 Shankar’s name is created in the app name
 
-_And then moved on next URLs:
+And then moved on next URLs:
 
 URLs in import in views path From Django URLs. import path From app to import to views URLs pattern Path (‘hello’/.views. hello
 
-_And next move on templates ;
+And next move on templates :
 
 Open a new directory right click on the open template 2nd also opens a new template And right click on an HTML page And then configure HTML to (write a logic) And next to setting and open Import OS. Base DIR.
 
