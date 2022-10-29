@@ -85,6 +85,7 @@ print(type(a))
 ### Difference between list and array:
 
 [1,2,3,4,5] -- list in comma separated values.
+
 [1 2 3 4 5] -- Array in white space separated values.
 
 ### Higher Dimensional Arrays:
@@ -229,6 +230,7 @@ In the above example, element four can be searched for the entire array and it g
 ### Sorting Array:
 
 An array can be sorted with all the elements in an ordered sequence. In NumPy they have one pre-defined function called sort ().
+
 **Example**
 ~~~
 import numpy as np
@@ -290,6 +292,7 @@ d-type –- type of the data.
 First, you have to define a function the same as python after creating functions, then you add these functions NumPy u-function library with from-py-function() function.frompyfunc() allows the creation of an arbitrary Python function  (variable length arguments) and the result is a Numpy u-function.
 
 create a u-function by adding two numbers.
+
 **Example**
 ~~~
 import numpy as np
@@ -319,7 +322,7 @@ arr1 = np.array([1, 2, 3 ,4, 5])
 arr2 = np.array([1, 2, 3, 4, 5])newarr = np.sum([arr1, arr2], axis=1)
 print(newarr)
 ~~~
-output:
+**output**
 ~~~
 [15 15]
 ~~~
@@ -341,10 +344,14 @@ print(x)
 ~~~
 35
 ~~~
+
 ### Ufunc in numpy:
+
 ufunc – stands for universal function. These ufunc are used to implement vectorization in NumPy. it's faster than iteration.
+
 ### Vectorization:
 Iterative statements can Convert into a vector-based operation called vectorization.
+
 **Example**
 ~~~
 import numpy as np
@@ -363,6 +370,7 @@ print(type(np.add))
 ### ufunc differences:
 
 The discrete difference means subtracting two elements in a particular array.
+
 **Example**
 ~~~
 import numpy as np
@@ -442,7 +450,11 @@ encode() method encodes the string. if we can't specify the encoding method it c
 ### UTF - 8:
 UTF – stands for Unicode Transformation Format. Here 8 means 8 – bit value.
 ### status code:
-After completing execution status code returns a number for the given URL. The most used status codes are mentioned below. Syntax: response. status code
+After completing execution status code returns a number for the given URL. The most used status codes are mentioned below. 
+~~~
+**Syntax:** response.status code
+~~~
+
 Status code and Information
    -  200 --		    OK requests successful.
    -  204 --		No content to return but the response is satisfied.
@@ -456,7 +468,7 @@ Status code and Information
    -  501	--		Not implemented (server does not support the requirement)
    - 507 --			Insufficient storages.
    
-## Elapsed:
+### Elapsed:
 
 - Save the timestamp at beginning of the code start.
 - Save the timestamp at end of the code end.
