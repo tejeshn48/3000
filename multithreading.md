@@ -50,7 +50,6 @@ t= Thread ()
 ~~~
 
 start a thread:
-
 * A thread is started by applying start () method on the thread object.
 ~~~
 from import threading   *
@@ -78,7 +77,7 @@ Hello
 1.Multiple tasks need to achieved.
 2.Task do not have interdependency.
 Multithreading is use to saving the time and improving performance. But it cannot be applicable anywhere.in the previous example like process based.
-#####  HOW TO CREATE A THREADS IN PYTHON:
+######  HOW TO CREATE A THREADS IN PYTHON:
 * They are three methods to creating multithreading:
 1.Without creating a class.
 2.By Extending thread class.
@@ -102,8 +101,9 @@ executing fun1…
 ~~~
 
 •Before creating a thread in python, you have to import threading module.
-Import threading module command in python is “from import threading* “. Here, “every process has executing one thread that is main thread”. Here defines a function with function name like fun. In that creating a block of code whereas define for loop range of 5, then printed after that creating child thread using a thread class which is present in the threading module, this child thread specified with target(fun) function is defined. after that (t1=Thread ()) this is used to executed new function not the main thread. Following that t1. Start () is used to start the child thread. after that print statement is define. 
-•Coming to output child thread is executed but main thread is not waiting for completing the child thread. that is “bye”. Now we want to wait for the main thread we are using join () function.  like this…
+Import threading module command in python is “from import threading* “. Here, “every process has executing one thread that is main thread”. Here defines a function with function name like fun. In that creating a block of code whereas define for loop range of 5, then printed after that creating child thread using a thread class which is present in the threading module, this child thread specified with target(fun) function is defined. after that (t1=Thread ()) this is used to executed new function not the main thread. Following that t1. Start () is used to start the child thread. after that print statement is define.
+ 
+ •Coming to output child thread is executed but main thread is not waiting for completing the child thread. that is “bye”. Now we want to wait for the main thread we are using join () function.  like this…
 ~~~
 
      From import the threading *
@@ -114,12 +114,9 @@ Import threading module command in python is “from import threading* “. Here
        t1. Start ()
        t1. Join ()
        print(“hello”)
-~~~
-         
-
- output:
  ~~~
-
+output:
+~~~
 executing fun1…
 executing fun1…
 executing fun1…
@@ -162,38 +159,42 @@ hello Main Thread
     object. start ()
     object. join ()
     print (“control return to”, current _ thread. get Name ())
-    ~~~
-    output:
-    ~~~
+~~~
+    
+output:
+~~~
     child = Thread-1
     child = Thread-1
     child = Thread-1
     child = Thread-1
     control to Main Thread
-    ~~~
+~~~
+    
 •In the above program create a class A, inheriting the thread class present in the threading module. after that over ridding the run function and by default must specified by self -parameter after that use for loop of the range of 4 executing the print statement. then create an object for the class A and start the executing child thread. then run the program. executing child class in according to the range. Then control will be in main thread.
 ##### 2.WITHOUT EXTENDING THE THREAD CLASS:
-    Class Example:
-    ~~~
-    def B(self):
-    l= [1,2,3,0.3,45]
-    for x in l:
-    print (“child thread”, x)
-    object = Example ()
-    t1=Thread (target=object. B)
-        t1. Start ()
-    t1. Join ()
-    print(“hello”)
-    ~~~
-    output:
-    ~~~
+
+Class Example:
+~~~
+   def B(self):
+   l= [1,2,3,0.3,45]
+   for x in l:
+   print (“child thread”, x)
+   object = Example ()
+   t1=Thread (target=object. B)
+   t1. Start ()
+   t1. Join ()
+   print(“hello”)
+~~~
+output:
+~~~
     child thread 1
     child thread 2
     child thread 3
     child thread 0.3
     child thread 45
     hello
-    ~~~
+~~~
+    
 * In the above program create a class with the name Example then define a function with function name B, self is the default parameter in the python.
 In this function we have given a list of elements to print the child thread one after one by using for loop. following that creating object with class name then creating a thread by inheriting the threading class as specified by object. B start () function used to execute the thread and join () function is used to wait the executing the finishing the child thread. output of this program should be child thread with the elements one after another. After that it is going to main thread then print the print statement hello.
 ##### ADVANTAGES OF MULTI THREADING:
@@ -225,9 +226,9 @@ Example with using thread:
     print (f’ finished in{round(end_time-start_time,2) second(s)’})
     s1. Join ()
     s2. Join ()
-    ~~~
-    output:
-    ~~~
+~~~
+output:
+~~~
     Hello
     Hello
     Hello
@@ -238,7 +239,7 @@ Example with using thread:
     Hi
     Bye
     finished in 0.0 second(s)
-    ~~~
+~~~
 In the above program using import time module for execution time in the process.
 
  
