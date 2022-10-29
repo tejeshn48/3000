@@ -1,22 +1,5 @@
 
 # Django Knowledge Base
-### General Request Flow:
-* Once the user requests for something, it will go to DNS (domain naming system). 
-* DNS will check for the corresponding **Domain name** or **IP address**. DNS will pass the request to a web server.
-* The web server will route to the app server from there it will go to JNDI from there it will go to the connection pool where objects will be allocated to the requests. 
-* Each request will get assigned one object. From there, objects will assist to take the data from the corresponding database.
-##### Web Server: 
-*  web server will return the response if the request is static content like HTML.
-##### App Server: 
-The App server will consist of: 
-1. Web Container 
-2. EJB container.
-https://github.com/tejeshn48/3000/blob/main/Tejesh-Django/img/Acrhitecture.jpg
-
-###### Web Container:
-* It consists of servlets and JSP pages.
-###### EJB Container: 
-* It consists of enterprise java beans.
 ### Django
 Django is a framework that is used to build apps. It use to follow **MVT** model.
 * *M* ---> stand for Model
@@ -224,7 +207,7 @@ MyMiddleware
 ~~~
 	
 Once view sends the request,
-1. First, it will call __to init__ method and it will go to **" Security Middleware"**, Once it is done it will point to the next middleware **"Session Middleware"**. Once Session Middleware did it will point to **Common Middleware**.
+1. First, it will call to __init__ method and it will go to **" Security Middleware"**, Once it is done it will point to the next middleware **"Session Middleware"**. Once Session Middleware did it will point to **Common Middleware**.
 2. After **Common Middleware** it will points to **CSRF Middleware** finally it will go to **Authentication Middleware.**
 3. Once all the above middleware gets complete Django will hand over the request to view itself.
 __call__ method is invoked before it calls the next method or after the response is processed and just before the response goes back to the client.
@@ -467,10 +450,12 @@ from a fighter. models import Employee
 def bose(request):
     myDict={"Name":"Tejesh"}
     return render(request,'template app/firstapp.html',myDict)
+    
 def emp(request):
     emps=Employee.objects.all()
     empDict={'emps':emps}
     return render(request,'templateApp/jsp.html',empDict)
+    
 def createEmp(request):
     form = EmployeeForm()
     if request.method =='POST':
@@ -479,6 +464,7 @@ def createEmp(request):
             form.save()
         return redirect('/')
     return render(request,'templateApp/create.html',{'form':form})
+    
 def deleteEmp(request,id):
     emp=Employee.objects.get(id=id)
     emp.delete()
@@ -544,7 +530,7 @@ HTML file 2: create.html
 
 **Form.py**
 ~~~
-from Django import forms
+from django import forms
 from fighter.models import Employee
 class EmployeeForm(forms.ModelForm):
     class Meta:
@@ -554,15 +540,11 @@ class EmployeeForm(forms.ModelForm):
 
 **Admin.py**
 ~~~
-from Django. contrib import admin
+from django.contrib import admin
 from fighter.models import Employee
-~~~
-
-**models.py**
-~~~
 class EmployeeAdmin(admin.ModelAdmin):
     list_display = ['firstName','Lastname,'sal']
-
+    
 admin.site.register(Employee,EmployeeAdmin)
 ~~~
 
@@ -623,7 +605,7 @@ class Employee(models.Model):
 Example2:
 ~~~
 from django.contrib.auth.models import User
-from Django.db import models
+from django.db import models
 payment_choices = (
     ('UPI', 'UPI'),
     ('CC', 'Credit Card'),
