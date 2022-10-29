@@ -57,7 +57,7 @@ file using a text editor such as Notepad.
 Copy the password from the InitialAdminPassword: *****@#
 instances faster, lighter.
 
-# Docker:
+# Docker
 ### That first we know about virtualization
 from now, deploying a service was a process that was both slow and painful. The process involved the writing of code by the development team and then its deployment by the operations team on metal machines. The operations team used to have their work cut out as they had to look for language compilers, libraries, and patches to make the code work. If the process had any errors or bugs, it would have to start all over again – the development team would fix the bugs or errors, and the operations team would again begin deploying the code. Things got a little better when Hypervisors were developed. So, what are Hypervisors? These are a collection of virtual machines (VMs) that may continuously be running or switched off at regular intervals, especially when not in use. Virtual machines definitely helped by accelerating the process of fixing errors and the deployment of code, but they still had a few issues. Docker containers came as the real game-changers. They even addressed the issues that existed in a virtual machine.
 ### What is Docker
@@ -140,8 +140,9 @@ process_view (self,request,view_kwargs) process_exception(self,exception) proces
 ```
 #### Activating Middleware
 To activate middleware, add it to the MIDDLEWARE list of the settings.py file.
+~~~
 ##### MIDDLEWARE = 
-```[
+[
 'django.middleware.security.SecurityMiddleware',  
 'django.contrib.sessions.middleware.SessionMiddleware',  
 'django.middleware.common.CommonMiddleware',  
@@ -151,7 +152,8 @@ To activate middleware, add it to the MIDDLEWARE list of the settings.py file.
 'django.middleware.clickjacking.XframeOptionsMiddleware',  
 'add newly created middleware here'
  ]
- ```
+ ~~~
+ 
  A Django project does not require middleware, the MIDDLEWARE list can be empty but recommended that have at least a CommonMiddleware.
 #### Middleware Order and Layering
 Middleware applies in the order it is defined in the MIDDLEWARE list and each middleware class is a layer. The MIDDLEWARE list is like an onion so each request passes through from top to bottom and the response is in reverse order (bottom to up).
