@@ -564,6 +564,7 @@ Html parser is a software. By using an Html parser data can pull after that it c
 <p> -- It is the open tag and </p> -- It is the closed tag.
 ~~~
 After the p tag, I enter one tab space. Here the parser ignores white space.
+
 **Output**
 ~~~
 This is my Html content.
