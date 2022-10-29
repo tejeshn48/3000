@@ -559,9 +559,12 @@ The requests-Html library is an Html parser. Html parser uses CSS selectors and 
 Html parser is a software. By using an Html parser data can pull after that it can leave the tags.
 
 **Example**
-Input: <p>   This is my Html content </p>
+
+**Input** 
+<p>   This is my Html content </p>
 After the p tag, I enter one tab space. Here the parser ignores white space.
 <p> -- It is the open tag and </p> -- It is the closed tag.
+
 **Output**
 This is my Html content.
 
