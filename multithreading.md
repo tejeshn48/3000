@@ -41,11 +41,11 @@ Class Thread:
 
 def run(self):
 
-print (thread function)
+print(thread function)
 
-for x in range (3):
+for x in range(3):
 
-t= Thread ()
+t=Thread()
 
 ~~~
 
@@ -55,12 +55,12 @@ start a thread:
 from import threading   *
 import time
 class Hello:
-def start (Thread):
-for x in range (5):
-print(“Hello”)
-time. Sleep ()
-s1=Hello ()
-s1. start
+def start(Thread):
+for x in range(5):
+print("Hello")
+time.Sleep()
+s1=Hello()
+s1.start
 ~~~
 
 output:
@@ -85,12 +85,12 @@ Multithreading is use to saving the time and improving performance. But it canno
 #####  Without creating a class:
 ~~~
 from import threading   *
-def fun ():
-for x in range (5):
-print (“executing fun1…”)
-t1=Thread (target =new)
-t1. start ()
-print(“hello”)
+def fun():
+for x in range(5):
+print("executing fun1…")
+t1=Thread(target=new)
+t1.start()
+print("hello")
 ~~~
 output:
 ~~~
@@ -107,13 +107,13 @@ Import threading module command in python is “from import threading* “. Here
 ~~~
 
      From import the threading *
-     def fun ():
-      for x in range (5):
-       print (“executing fun1…”)
-       t1=Thread(target=fun)
-       t1. Start ()
-       t1. Join ()
-       print(“hello”)
+     def fun():
+     for x in range(5):
+     print("executing fun1…")
+     t1=Thread(target=fun)
+     t1.Start()
+     t1.Join()
+     print("hello")
  ~~~
 output:
 ~~~
@@ -128,13 +128,13 @@ hello
 ~~~
 
 from import the threading * 
-def fun ():
-for x in range (5):
-print (“executing fun1…”, current_ thread (). get Name ()) 
+def fun():
+for x in range(5):
+print("executing fun1…", current_thread().getName ()) 
 t1=Thread(target=fun)
-             t1. Start ()
-t1. Join ()
-print (“hello”, current _ thread (). get Name ())
+t1.Start()
+t1.Join()
+print("hello",current_thread().getName())
 ~~~
 output:
 ~~~
@@ -151,14 +151,14 @@ hello Main Thread
 ##### Example:
 ~~~
     Import threading
-     Class A:    
+    Class A:    
     def run(self):
-    for x in range (4):
-    print (“child =”, current _thread (). get Name ())
-    object = A ()
-    object. start ()
-    object. join ()
-    print (“control return to”, current _ thread. get Name ())
+    for x in range(4):
+    print("child =",current _thread().getName())
+    object=A()
+    object.start()
+    object.join()
+    print("control return to",current _thread.get Name())
 ~~~
     
 output:
@@ -178,11 +178,11 @@ Class Example:
    def B(self):
    l= [1,2,3,0.3,45]
    for x in l:
-   print (“child thread”, x)
-   object = Example ()
+   print("child thread",x)
+   object=Example()
    t1=Thread (target=object. B)
-   t1. Start ()
-   t1. Join ()
+   t1.Start()
+   t1.Join()
    print(“hello”)
 ~~~
 output:
@@ -208,24 +208,24 @@ Example with using thread:
 
     from import threading *
     import time
-    start _time=time. Perf _counter ()
+    start _time=time.Perf_counter()
     class Hello:
-    def start (Thread):
-    for x in range (5):
-    print(“Hello”)
-    time. Sleep (1)
-    end _time= time. Perf _counter ()
+    def start(Thread):
+    for x in range(5):
+    print("Hello")
+    time.Sleep(1)
+    end _time=time.Perf_counter()
     class Hi:
-    def start (Thread):
-    for x in range (5):
+    def start(Thread):
+    for x in range(5):
     print(“Hi”)
-    time. Sleep (1)
-    s1=Hello ()
-    s2=Hi ()
-    print(“Bye”)
+    time.Sleep(1)
+    s1=Hello()
+    s2=Hi()
+    print("Bye")
     print (f’ finished in{round(end_time-start_time,2) second(s)’})
-    s1. Join ()
-    s2. Join ()
+    s1.Join()
+    s2.Join()
 ~~~
 output:
 ~~~
@@ -289,10 +289,10 @@ https://github.com/tejeshn48/3000/tree/main/rajeswari/images
 ##### Example:
 ~~~
 import tkinter
-window= tkinter. Tk () # to rename the title of the window 
+window=tkinter.Tk() # to rename the title of the window 
 #Pack is used to show the objects in the window
-label=tkinter. Label (window). Pack ()
-window. main loop ()
+label=tkinter.Label(window).Pack()
+window.mainloop()
 ~~~
 ##### output:
 https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-52f5ae4fd2db583e94817baba
@@ -310,10 +310,10 @@ Label: you can use set of label fonts so you can make it bigger and maybe bold.i
 ##### Example:
 
     import tkinter
-    window= tkinter. Tk () # to rename the title of the window
-    label=tkinter. Label (window, text=” Hello”, font= (“Arial Bold”,50))
-    label. grid (column=0, row=0)
-    window. main loop ()
+    window=tkinter.Tk() # to rename the title of the window
+    label=tkinter.Label(window,text="Hello",font=("Arial Bold",50))
+    label.grid(column=0,row=0)
+    window.mainloop()
 output:
     https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-3a01362c77e3a18b8ca19a5c8e
   
@@ -321,11 +321,11 @@ We can set the default window size using geometry function set it as per the req
 ##### Example:
 ~~~
 import tkinter
-window= tkinter. Tk () # to rename the title of the window
-label=tkinter. Label (window, text=” Hello”, font= (“Arial Bold”,50))
-window. geometry=(“352x232”)
-label. grid (column=0, row=0)
-window. main loop ()
+window=tkinter.Tk() # to rename the title of the window
+label=tkinter.Label(window,text="Hello",font=("Arial Bold",50))
+window.geometry=("352x232")
+label.grid(column=0,row=0)
+window.mainloop()
 ~~~
 output:
 https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-39d7120f67244d58d83b75fc8
@@ -336,13 +336,13 @@ Adding button to the window, the button is created and added to the new window t
 ###### Example:
 ~~~
 import tkinter
-window= tkinter. Tk () # to rename the title of the window
-label=tkinter. Label (window, text=” Hello”, font= (“Arial Bold”,50))
-window. geometry=(“352x232”)
-bt =Button (window, text=” enter”)
-bt. grid (column=1, row=0)
-label. grid (column=0, row=0)
-window. main loop ()
+window=tkinter.Tk() # to rename the title of the window
+label=tkinter.Label(window,text="Hello",font=("Arial Bold",50))
+window.geometry=("352x232")
+bt=Button(window,text="enter")
+bt.grid(column=1,row=0)
+label.grid(column=0,row=0)
+window.mainloop()
 ~~~
 output:
 https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-3a01362c77e3a18b8ca19a5c8e
@@ -357,13 +357,13 @@ Here, using the grid function to set the button position on are particular windo
 ~~~
 
 import tkinter
-window= tkinter. Tk () # to rename the title of the window
-label=tkinter. Label (window, text=” Hello”, font= (“Arial Bold”,50))
-window. geometry=(“352x232”)
-bt =Button (window, text=” enter”, bg=” orange”, fg=” red”)
-bt. grid (column=1, row=0)
-label. grid (column=0, row=0)
-window. main loop ()
+window=tkinter.Tk() # to rename the title of the window
+label=tkinter.Label(window,text="Hello",font=("Arial Bold",50))
+window.geometry=("352x232")
+bt=Button(window,text="enter",bg="orange",fg="red")
+bt.grid(column=1,row=0)
+label.grid(column=0,row=0)
+window.mainloop()
 ~~~
 output:
 https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-f9e2a6be13d139133bcabf680
@@ -375,15 +375,15 @@ https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c
 ~~~
 import tkinter
 from tkinter import *
-def clicked ():
-window= tkinter. Tk () # to rename the title of the window
- label=tkinter. Label (window, text=” Hello”, font= (“Arial Bold”,50))
- label. configure (text=” button clicked”)
- bt =Button (window, text=” enter”, command=clicked)
- bt. grid (column=1, row=0)
- label. grid (column=0, row=0)
-window. main loop ()
-clicked ()
+def clicked():
+window=tkinter.Tk() # to rename the title of the window
+label=tkinter.Label(window,text="Hello",font=("Arial Bold",50))
+label.configure(text="button clicked")
+bt =Button(window,text="enter",command=clicked)
+bt.grid(column=1,row=0)
+label.grid(column=0,row=0)
+window.mainloop()
+clicked()
 ~~~
 output:
 https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-38da553edd92bc9a075145c17
@@ -393,20 +393,20 @@ Here function that will execute the button click event and writing the button wi
 It is used create input fields in the GUI. In the previous python GUI examples, we saw the simple widgets. now try getting to the user input using Tkinter Entry class (Tkinter textbook).
 ###### Example:
 ~~~
- import tkinter
+import tkinter
 from tkinter import *
-window= tkinter. Tk ()
-txt=Entry (window, width=10)
-txt. grid (column=1, row=0)
+window=tkinter.Tk()
+txt=Entry(window,width=10)
+txt.grid(column=1,row=0)
 def clicked ():
-result=” welcome to” + txt.get ()
-label=tkinter. Label (window, text=” Hello”, font= (“Arial Bold”,50))
-label. configure (text=” button clicked”)
-bt =Button (window, text=” enter”, command=clicked)
-bt. grid (column=1, row=0)
-label. grid (column=0, row=0)
-window. main loop ()
-clicked ()
+result="welcome to" + txt.get()
+label=tkinter.Label(window,text="Hello",font=("Arial Bold",50))
+label.configure(text="button clicked")
+bt=Button(window,text="enter",command=clicked)
+bt.grid(column=1,row=0)
+label.grid(column=0,row=0)
+window.mainloop()
+clicked()
 ~~~
 output:
 https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-ea81cee71d7bad7a2ea4bbda2
@@ -420,13 +420,13 @@ It is nothing but drop down the menu with the options. Combo box widgets are ver
 ~~~
 import tkinter
 from tkinter import *
-from tkinter.ttt import combo box
-window=tkinter. Tk ()
-combo=combo box(window)
-combo[“values”] =(1,2,3,4,”text”) # Adding combo box items using the tuple.
-combo. Current (3)   # setting the selected items.
-combo. grid (column=0, row=0)
-window. main loop ()
+from tkinter.ttt import combobox
+window=tkinter.Tk()
+combo=combobox(window)
+combo[“values”]=(1,2,3,4,”text”) # Adding combo box items using the tuple.
+combo.Current(3)   # setting the selected items.
+combo.grid(column=0,row=0)
+window.main loop()
 ~~~
 output:
       https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-11eb1eeb61ed47674593963c1
@@ -438,15 +438,15 @@ output:
 ###### Example:
 ~~~
 import tkinter
- from tkinter import *
- window=tkinter. Tk ()
-rad1=Radio button (window, text=” HELLO”, value=1)     # set the values for every radio button with a different value, otherwise, they won’t work.
-rad2=Radio button (window, text=” python”, value=2)
- rad3=Radio button (window, text=” world”, value=3)
- rad1.grid(column=0, row=0)
- rad2.grid(column=1, row=0)
- rad3.grid(column=2, row=0)
- window. main loop ()
+from tkinter import *
+window=tkinter.Tk()
+rad1=Radiobutton(window,text="HELLO",value=1)     # set the values for every radio button with a different value, otherwise, they won’t work.
+rad2=Radiobutton(window,text="python",value=2)
+rad3=Radiobutton(window,text="world",value=3)
+rad1.grid(column=0,row=0)
+rad2.grid(column=1,row=0)
+rad3.grid(column=2,row=0)
+window.mainloop()
  ~~~
 output:
 https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-194e74eaf1443695df696efcb5acda52befa1c9df9446dda02723d5b74eaf72d
@@ -472,16 +472,16 @@ https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c
 ###### Example:
 ~~~
 import tkinter
-                 from tkinter import *
-                 window=tkinter. Tk ()
-                 window. tittle(“python”)
-                 top frame=tkinter. Frame(window). pack ()
-                 bottom frame=tkinter. Frame(window). pack (side=” bottom”)
-                 bt1=tkinter. Button (top frame, text=” Button1”, fg=” red”). pack ()
-                 bt2=tkinter. Button (top frame, text=” Button2”, fg=” green”). pack ()
-                 bt3=tkinter. Button (top frame, text=” Button2”, fg=” orange”). pack (side=” left”)
-                 bt4=tkinter. Button (top frame, text=” Button2”, fg=” yellow”). pack (side=” left”)
-                 window main loop ()
+from tkinter import *
+window=tkinter.Tk()
+window.tittle("python")
+topframe=tkinter.Frame(window).pack()
+bottomframe=tkinter.Frame(window).pack(side="bottom")
+bt1=tkinter.Button(top frame,text="Button1",fg="red").pack()
+bt2=tkinter.Button(topframe,text="Button2",fg="green").pack()
+bt3=tkinter.Button(topframe,text="Button2",fg="orange").pack(side="left")
+bt4=tkinter.Button(topframe,text="Button2",fg="yellow").pack(side="left")
+window mainloop ()
 ~~~
                 
 output:
@@ -497,13 +497,13 @@ output:
 ~~~
 import tkinter
 from tkinter import *
-window=tkinter. Tk ()
-window. Title("Python")
-tkinter. Label (window, text="user name"). grid(row=0)
-tkinter. Entry(window). grid (row=0, column=1)
-tkinter. Label (window, text="password"). grid(row=1)
-tkinter. Entry(window). grid (row=1, column=1) 
-window. main loop ()
+window=tkinter.Tk ()
+window.Title("Python")
+tkinter.Label (window,text="user name").grid(row=0)
+tkinter.Entry(window).grid (row=0, column=1)
+tkinter.Label (window,text="password").grid(row=1)
+tkinter.Entry(window).grid (row=1, column=1) 
+window.main loop ()
 ~~~
 ##### output:
 https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-75813b31492a2f9c36c44164b
