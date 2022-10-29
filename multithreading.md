@@ -9,7 +9,7 @@
  Executing several tasks simultaneously.
 #### Example:
 In Our Class Room: we are doing browsing, program executions, writing Notes, listening class, Checking Mobiles, Discussing some topics etc.…
-They are two types of multi taskings:
+* They are two types of multi taskings:
 1. Process based multitasking.
 2. Thread based multitasking.
 ##	Process based multitasking:
@@ -56,10 +56,10 @@ time. Sleep ()
 s1=Hello ()
 s1. start
 output:
-             Hello
-             Hello
-             Hello
-             Hello
+Hello
+Hello
+Hello
+Hello
 ~~~
 ### When to USE multithreading in python:
 Multithreading in python can be used:
