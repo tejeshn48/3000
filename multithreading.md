@@ -35,7 +35,7 @@ Multithreading is defined as the ability of a processor to execute multiple thre
 Like:https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-0d08851287a74858d3e2899860f1eea
  
 ##### Program on multithreading:
-~~~
+
 ~~~
 
 Create a thread:
