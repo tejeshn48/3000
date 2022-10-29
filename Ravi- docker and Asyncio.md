@@ -61,7 +61,7 @@ Each time Docker launches a container from an image, it adds a thin writable lay
 To create your first Docker application, I invite you to create a folder on your computer. It must contain the following two files:
 1.	‘main.py’ file is a python file that will contain the code to be executed.
 2.	Docker file that will contain the necessary instructions to create the environment.
-### the Docker image :
+### The Docker image :
 Once your code is ready and the Dockerfile is written, all you have to do is create your image to contain your application.
 docker build -t python-test.
 The ’–t ’ option allows you to define the name of your image. In our case, we have chosen ’ python test but you can put what you want.
