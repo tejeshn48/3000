@@ -35,16 +35,11 @@ Like:https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d6
 ##### Program on multithreading:
 Create a thread:
 ~~~
-Import threading
-
+import threading
 Class Thread:
-
 def run(self):
-
 print(thread function)
-
 for x in range(3):
-
 t=Thread()
 
 ~~~
@@ -52,7 +47,7 @@ t=Thread()
 start a thread:
 * A thread is started by applying start () method on the thread object.
 ~~~
-from import threading   *
+from import threading *
 import time
 class Hello:
 def start(Thread):
@@ -84,7 +79,7 @@ Multithreading is use to saving the time and improving performance. But it canno
 3.Without Extending thread class.
 #####  Without creating a class:
 ~~~
-from import threading   *
+from import threading *
 def fun():
 for x in range(5):
 print("executing fun1…")
