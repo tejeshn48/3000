@@ -251,8 +251,12 @@ In the above program using import time module for execution time in the process.
 
 
 
+
+
 # TKINTERS
  
+
+
 #####  TKINTER:
 Tkinter is the standard library for python. Python when combined with Tkinter provides a fast and easy way to create GUI applications. Tkinter provides a powerful object-oriented interface to the Tk GUI toolkit.
 #####   What is a GUI:
@@ -420,9 +424,9 @@ from tkinter.ttt import combo box
 window=tkinter. Tk ()
 combo=combo box(window)
 combo[“values”] =(1,2,3,4,”text”) # Adding combo box items using the tuple.
-      combo. Current (3)   # setting the selected items.
-      combo. grid (column=0, row=0)
-      window. main loop ()
+combo. Current (3)   # setting the selected items.
+combo. grid (column=0, row=0)
+window. main loop ()
 ~~~
 output:
       https://github.com/tejeshn48/3000/commit/c61f8f6b0b5564a650f44ae55bb32bc6d66931c4#diff-11eb1eeb61ed47674593963c1
