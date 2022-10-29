@@ -6,7 +6,7 @@
 - web scraping is also known as web data extraction or web harvesting.
 - All websites can't allow web scrapping some websites allow it. If you want to know whether a website allows web scrapping or not. If you want to scrap the data. In URL after the domain name or server name, we can append the "/robots.txt," file.
 - Take an example to clearly understand. Here I am scrapping the Instagram website. https://www.instagram.com/robots.txt
-Here we can't scrap phone pay it shows a 404 error page not found error. https://www.phonepay.com/robots.txt
+- Here we can't scrap phone pay it shows a 404 error page not found error. https://www.phonepay.com/robots.txt
 
 # Beautiful Soup
 
