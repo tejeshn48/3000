@@ -543,11 +543,11 @@ First, you know the basic Html and go to requests-Html.
 
 ### Html tags:
 
-- <html> -- root element.
-- <head> -- meta information.
-- <title> -- title of the Html page.
-- <body> -- container (content of the Html page).
-- <h1> -- large heading, <h2>, <h3>, <h4>, <h5>, <h6> (h1 large heading then compared to h2 it decreases the size one by one).
+- <html> - root element.
+- <head> - meta information.
+- <title> - title of the Html page.
+- <body> - container (content of the Html page).
+- <h1>, <h2>, <h3>, <h4>, <h5>, <h6> (h1 large heading then compared to h2 it decreases the size one by one).
 - <p> -- paragraph.
 
 Element is defined by starting tag, some useful information, and an ending tag.
