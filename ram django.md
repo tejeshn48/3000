@@ -4,11 +4,17 @@
 2. Ex;Kitchen in mother 1st in prepare to cook on one side and another side cutting on vegetables and one side calling in a mobile and preparing to lunch box this is an so many tasks to prepare at a time this is called multi-tasking each task is a separate independent process
 ## Multithreading :
 Multiple independent parts of simultaneously which known as thread a thread is a unit of execution on concurrent programming where each task is an independent part of the same program
+
 Ex; there is a 1 program
+
 Thread1
+
 Thread2
+
 Thread3
+
 Is 1 Program in 3 Threads
+
 How many programs are there in 1 program how many independent threads are there 3 where each task is one independent same program there was a python program in checked in line by line but threading is divided into 3 parts so the program is executed in less time what is the thread;
 A flow of execution is considered as a thread it is a python object most commonly used in the concept of application level multitasking concept at the operating concept level multi-threading concept is used in ;
 Multimedia, Lofing, Animation, Video games, the server implementation
@@ -18,27 +24,47 @@ Multimedia, Lofing, Animation, Video games, the server implementation
 3rd: thread without extending thread class
 
 .Import threading #threading .current- thread
+
 .Import threading import #current thread
+
 .def display ():
+
 .for I in range (10):
+
 .print (‘child thread’)
+
 .t= thread () # by creating thread object
+
 .t= thread (target=display) #creation of thread object to execute display
+
 .t.start ()
+
 .for I in range (10) :
+
 .print (‘main thread’)
+
 .threading is a module name
+
 .thread is a class name
+
 .module is threading
+
 .main threading
+
+
 
 import threading
 
 print(“current executing threading : ,threading.current-thread () .get name ()”) there are 2 functions in the current thread (). Get name ()
 
+Example:
+
 from time import sleep
+
 from threading import *
+
 class Hello(Thread):
+
 def run(self):
 
 for I in range(10):
@@ -46,51 +72,96 @@ for I in range(10):
    print('Hello')
 
    sleep(1)
+   
 class Hi(Thread):
+
 def run(self):
 
+
   for I in range(10):
+  
 
       print('Hi')
 
       sleep(1)
+      
 t1=Hello()
+
 t2=Hi()
+
 t1.start()
+
 sleep(0.5)
+
 t2.start()
+
 t1.join()
+
 t2.join()
+
 print(‘bye’…
 
 
+
+
+Next example:
+
+
+
 #from time import sleep
+
 from threading import *
+
 class Book(Thread):
+
 def run(self):
+
 for i in range(10):
+
 print(‘Book’)
+
 sleep(1)
+
 class Pen(Thread):
+
 def run(self):
+
 for i in range(10):
+
 print(‘Pen’)
+
 sleep(0.5)
+
 class Pencil(Thread) :
+
 def run(self):
+
 for i in range(10):
+
 print(‘Pencil’)
+
 sleep(1)
+
 t1 = Book()
+
 t2 = Pen()
+
 t3 = Pencil()
+
 t1.start()
+
 time.sleep()
+
 t2.start()
+
 t3.start()
+
 t1.join()
+
 t2.join()
+
 t3.join()
+
 print(‘bye’)…
 
 _ we can not exactly output but the question is why means threading means is concatenation at a time.
@@ -104,9 +175,13 @@ _so threads are same time coming to the main thread
 Django is a web application development of the framework Using Django is a development complete web application by doing all the server-side programming And we run every application as a Django server Django is a python framework that makes it easier to create websites using python Django is especially helped fully for database-driven websites
 ## How does Django work
 Django follows the MVT design pattern
+
 M=MODEL
+
 V=VIEW
+
 T=TEMPLATE
+
 ##### MODEL
 The model provides data from to database The common way to extract data from a database is SQL The models are usually models.py
 ##### VIEW
@@ -124,16 +199,38 @@ It is suggested to have a dedicated virtual environment for each Django project,
 python -m pip install Django
 
 _ DJANGO PROJECT ……
+
 _ Introduction…
+
 _ Getting started…
-_ Create folder …
+
+_ Create folder...
+
+_ Create virtualenv...
+
+_ Scripts activated...
+
+_Django install...
+
+
 _ Create project…
+
 _ Create app…
+
 _ Next…
+
+_ Go to settings
+
+_ Go to models
+
 _ To views…
+
 _ URLs… Setting Templates Models
+
 _ TEMPLATES… Variables Template tags If else For loop Comment
+
 _ STATIC FILES… Add CSS files Add js file Add image
+
 _ QUERY SETS ….
 
 ##### MODELS:
@@ -175,24 +272,42 @@ The system check identified no issues (0 silenced).
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, content types, and sessions. Run ‘python manage.py migrate’ to apply them. December 02, 2021 - 13:14:51 Django version 3.2.9, using settings ‘my world.settings’ Starting development server at http://127.0.0.1:8000/ Quit the server with CTRL-BREAK. Open a new browser window and type 127.0.0.1:8000 in the address bar. The result: The project is run in cmd or pycharm cmd :
 
 *Firstly chose the c drive d drive
+
 *Create virtual environment
+
 *For creating directory
+
 *For creating a folder
+
 *Then open the folder and create a new project
+
 *It means the project name
+
 *Then creating a project app
+
 *This means another project name
+
 *This is the project cmd mode process
+
 *and next move a Django project
+
 *project files create a Folder the Folder open to the shows in
+
 *This type of app in showing
+
 *And the open in settings:
+
 *App name is ;ex; shankar
+
 Shankar is open to setting in:Shankar
+
 *And then next views:
 
-Import I Django From Django http import HTTP Response 
+
+Import I Django From Django http import HTTP Response
+
 This means in HTTP is capital letters 2nd HTTP And creating in function anything Def display (request) :
+
 Return HTTPResoponce shankar : 
    
 Shankar’s name is created in the app name
@@ -207,12 +322,19 @@ Open a new directory right click on the open template 2nd also opens a new templ
 
  Dir (OS.path.join//base dir ‘shankar’)
  Installed apps DIR template DIR
+ 
  Next move on VIEWS.
+ 
  Create path.
+ 
  Then complete of process.
+ 
  And moved on command
+ 
  Python mange.py run server
+ 
  Then open the code
+ 
  The first project is complete
  
 ### MIDDLE WARE OF DJANGO :
@@ -239,32 +361,57 @@ The Django login form is returned using the post method. in which the browser bu
 DJANGO PROJECT STRUCTURE :
 
 . ├── apps
+
 │ └── app_1
+
 │ ├── admin.py
+
 │ ├── apps.py
+
 │ ├── init.py
+
 │ ├── migrations
+
 │ │ └── init.py
+
 │ ├── models.py
+
 │ ├── tests.py
+
 │ └── views.py
+
 ├── django_project
+
 │ ├── init.py
+
 │ ├── pycache
+
 │ │ ├── init.cpython-35.pyc
+
 │ │ └── settings.CPython-35.pyc
+
 │ ├── settings.py
+
 │ ├── urls.py
+
 │ └── wsgi.py
+
 ├── manage.py
+
 ├── media
+
 ├── static
+
 └── templates
+
   MANAGE. PY
   
 This file is used basically as a command line utility and for deploying, debugging, or running our web application This file contains code for the run server, or makemigrations or migrations, etc that we use in the shell. anyway, we do not need to make any changes to the file.
+
 ##### RUN SERVER :
+
 this command is used to run the server for our web application
+
 ##### MIGRATE:
 This is used for applying the changes done to our models into the databases.
 That is if make any changes to our database then we use migrate command This is used for the first time we create the database
@@ -291,13 +438,20 @@ from a python supporter form to a file support form is this called serialization
 
 Deserialization means the file-supported form is converted into the python supported form this is called deserialization This is the reverse process of serialization
 *Employe:number=100 === this is EMPLOYE OBJECT
+
 *Employe : name=ram
+
 *Employe: salry=1000
+
 *Employe: id =112
+
 *write[RU1] ==== serialization & marshaling
+
 #####    pickling:
 THIS IS AN OBJECT FILE FORM OR NETWORK SUPPORT OBJECT
+
 THIS IS PYTHON OBJECT
+
 READ == DESERILIZATION & UNMARSHILING ==
 UNPICKLING
 
@@ -307,16 +461,28 @@ In this article. we will see how to add JSON fields to our Django models. JSON i
 
 ###      PICKLE:
 Pickle is a module Pickle in python is primarily used in serializing and deserializing a python object structure in other words it s the process of converting a python object into a byte stream to store it in a file /database. maintain program state across the session or transport data over the network Pickle function we can perform serialization By using a function in DUMP(): Which using the function we can deserialization by using a function in LOAD(): We are known as unpickling
+
 E=employe (100,’ ram’,10000,’hyd’)
+
 With open (‘emp. ser’ ‘wb’) as f:# writing binary
+
 Pickle.dump(e,f) #serilization
+
 With open (‘emp. ser’,’ be) as f :
+
 Emo-boy = pickle.load (f)
+
 Binary data=not readable form
+
 Import pickle
+
 CLASS EMPLOYE :
+
+
 Def __init __ (self, eno ,name, esal,addr):
+
 Self. no = eno
+
 
         Self. name = name #instance variables
 
@@ -324,12 +490,21 @@ Self. no = eno
 
      Self. eaddr = eaddr
 Def display (self):
+
 Print (‘E NO : { } , E NAME : { } ,E SAL : { }, E ADDR : { } ‘ . FORMAT ( self. E no, self . ename ,self . esal , self. eaddr))
+
 E = employee ( 100, ‘ ram ‘ , 10000, ‘ hyd ‘ )
+
 With open (‘emp . ser,’ wb ‘) as f :# serilization
+
 Pickle. dump ( e, f )
+
 Print ( ‘ pickling of employee object completed ‘ )
+
 With open ('emp.ser','rb')as F: #deserilization
+
 new_obj = pickle.load(f)
+
 new_obj.display()
+
 print('unpickling of employee object completed')
