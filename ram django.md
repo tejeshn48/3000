@@ -2,7 +2,7 @@
 ## Multitasking
 1. Multi-tasking is a general word executing several tasks simultaneously is the concept of multitasking
 2. Ex;Kitchen in mother 1st in prepare to cook on one side and another side cutting on vegetables and one side calling in a mobile and preparing to lunch box this is an so many tasks to prepare at a time this is called multi-tasking each task is a separate independent process
-## Multi threading :
+## Multithreading :
 Multiple independent parts of simultaneously which known as thread a thread is a unit of execution on concurrent programming where each task is an independent part of the same program
 Ex; there is a 1 program
 Thread1
