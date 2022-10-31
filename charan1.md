@@ -5,7 +5,7 @@ Agile teams produce workable and robust code in each iteration. All that code if
 
 ### The Build Process
 
-It is a process by which source code is converted into a stand-alone form that can be run on a computer. For example, a source code written to develop windows software when built will create an **A.jar. or ear or .msi file**. Another example is if a java source code is built it may create **A.jar. or ear file**.This is deployable manually. but some build tools make the developer's life easy when it comes to building artifact or even deploying it. These are called build automation tools.
+It is a process by which source code is converted into a stand-alone form that can be run on a computer. For example, a source code written to develop windows software when built will create an **A.jar. or ear or .msi file**. Another example is if a java source code is built it may create **A.jar. or ear file**.This is deployable manually. But some build tools make the developer's life easy when it comes to building artifact or even deploying it. These are called build automation tools.
 
 ### There are some build tools:
 
@@ -22,7 +22,7 @@ Developers will the code and verify it locally they push it to their local syste
 
 ### The solution
 
-Then whenever the developer pushes the code to the version control system it should be fetched, built & tested by a build server at the same time This process repeated several times in a week or day, or daily once is called continuous integration. The developer's code is continuous integration so at any point in time we have workable software if there is an issue in the build process the developers will get notified through email and they will fix the problem. Jenkins is a continuous integration server that can fetch the latest code from the version control system, build it and test it and notify developers. Jenkins can do many things apart from just being a continuous integration server. it was originally known as Hudson, oracle owns Hudson now. Jenkins is an open-source project written by kohuske Kawaguchi. Jenkins is a java-based web application server. As a prerequisite, we need java on the machine to run a Jenkins server
+Then whenever the developer pushes the code to the version control system it should be fetched, built & tested by a build server at the same time. This process repeated several times in a week or day, or daily once is called continuous integration. The developer's code is continuous integration so at any point in time we have workable software if there is an issue in the build process the developers will get notified through email and they will fix the problem. Jenkins is a continuous integration server that can fetch the latest code from the version control system, build it and test it and notify developers. Jenkins can do many things apart from just being a continuous integration server. it was originally known as Hudson, oracle owns Hudson now. Jenkins is an open-source project written by kohuske Kawaguchi. Jenkins is a java-based web application server. As a prerequisite, we need java on the machine to run a Jenkins server.
 
 ### The feature of Jenkins
 
@@ -55,7 +55,7 @@ Access to an account with administrator privileges
 - Once the download is complete, run the jenkins.msi installation file.
 - The setup wizard starts. Click Next to proceed.
 - Select the install destination folder and click Next to continue.
-- Under the Run service as a local or domain user option, enter the domain username and password for the user account you want to run Jenkins with. Click Test Credentials to verify the login data, then click Next to proceed. Using the Run service as a Local system option doesn’t require you to enter user login data. Instead, it grants Jenkins full access to your system and services. Note that this is a less secure option and is thus not recommended. Note: When selecting the Run service as a local or domain user, the user in question must have the required permission to log on as a service. If this is not the case, an error message stating the account cannot be verified appears. In the event of this error, perform the following steps to resolve the issue:
+- Under the Run service as a local or domain user option, enter the domain username and password for the user account you want to run Jenkins with. Click Test Credentials to verify the login data, then click next to proceed. Using the Run service as a Local system option doesn’t require you to enter user login data. Instead, it grants Jenkins full access to your system and services. Note that this is a less secure option and is thus not recommended. Note: When selecting the run service as a local or domain user, the user in question must have the required permission to log on as a service. If this is not the case, an error message stating the account cannot be verified appears. In the event of this error, perform the following steps to resolve the issue:
 - Make sure you are logge
 - D in as a user with administrative privileges.
 - In the Administrative Tools, open Local Security Policy.
@@ -119,7 +119,7 @@ It is an interface client that interacts with Docker Daemon. It helps developers
 
 ### Docker Engine Rest API
 
-It facilitates interactions between Docker daemon and applications. An HTTP client is usually required to access these APIs. Docker Architecture Docker architecture is a client-server-based architecture. It has three major components that are mentioned below:
+It facilitates interactions between Docker daemon and applications. An HTTP client is usually required to access these APIs.Docker architecture is a client-server-based architecture. It has three major components that are mentioned below:
 
 ###### 1. Docker host
 
@@ -133,24 +133,19 @@ In the initial phase, the Docker client interacts with the daemon, which is resp
 for performing much of the work that goes into developing, running, and distributing Docker containers. Docker daemon and the client can either run on a single system or the developer can use a remote daemon to connect it with a local Docker client. Rest API is used to establish communication between the Docker daemon and the client. This can be either done over a network interface or UNIX sockets.
 
 ###### 1. Docker Host
-
 A Docker host is responsible for running the Docker daemon. Docker Daemon entertains API requests, including docker build and docker run amongst others. It also manages images, networks, containers, and other Docker objects. Daemons can communicate with each other to manage different Docker services.
 
 ###### 2.Docker Client
-
 It is nothing but the method that users use to interact with Docker. The Docker client sends our requests, such as docker run, and Docker builds to the Docker daemon. A very important feature of the Docker client is that it can communicate with several daemons.
 
 ###### 3.Docker Registry
-
 A registry is a server-side application that is scalable and stateless. It not only stores Docker images but lets developers distribute them as well. Docker provides us with f //RFFFCc 
 the flexibility to create our own images, or there are public registries available that we can make use of. These registries include Docker Cloud and Docker Hub amongst others. Docker’s configuration is such that it always turns to Docker Hub and other public registries to look for images. However, we have the option of creating our own registry. So, we can pull out the required images using our own registries with the help of docker run and docker pull commands. The Docker push command pushes the required image to the registry that we created.
 
 ###### 4. Docker Objects
-
 We use and create several objects while using Docker. These objects include containers, images, plugins, volumes, networks, and others.
 
 ### Docker Images
-
 A Docker image is nothing but a read-only template that provides us with the instruction required to create a container. On many occasions, one image has a connection with another image. What differentiates the two images is the added layer of customization. To put it differently, an image can also be defined as an immutable snapshot of a container. Images are small, lightweight, and fast. 6. Docker Containers Let’s follow a different approach to understanding Docker containers. So, if an image could be used for representing a class, a container could be its instance. In other words, a container is a runtime object. We can create, start, move, stop, or delete containers with the help of Docker CLI or API. Containers can also be attached to storage and connected to one or more than one networks. Depending on the current state of a container, we can also create a new image. Conclusion Now that you know what Docker architecture and its components are, you are in a better position to understand the rise in its popularity. It simplifies infrastructure management and helps make instances faster, and lighter.
 	 
 	 
