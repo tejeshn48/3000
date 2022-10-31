@@ -64,12 +64,13 @@ Access to an account with administrator privileges.
 - Click the Add User or Group… button.
 - Use the Select Users or Groups dialogue to add the current user and click OK.
 - Save changes by clicking the OK button in the Properties window.
-- Enter the port number you want Jenkins to run on. Click Test Port to check if the selected port is available, then click Next to continue.
+- Enter the port number you want Jenkins to run on. Clic
+- k Test Port to check if the selected port is available, then click Next to continue.
 - Select the directory where Java is installed on your system and click Next to proceed.
 - Select the features you want to install with Jenkins and click Next to continue.
 - Click Install to start the installation process.
 - Once the installation is complete, click Finish to exit the installation wizard. Unblock Jenkins After completing the installation process, you must unblock Jenkins before you can customize and start using it.
-- In your web browser, navigate to the port number you selected during the installation using the following address:
+- In your web browser, navigate to the port number you selected during the installation using the following address :
 - Navigate to the location on your system specified by the Unblock Jenkins page. 
 - The Unblock Jenkins page may point to a hidden directory. In case you cannot find the directory, make sure you enable viewing hidden items.
 -	Open the InitialAdminPassword.
