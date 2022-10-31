@@ -308,7 +308,7 @@ The tqdm_notebook.pandas() is responsible for displaying the progress bar. The p
 * Clear code: The clear API of the Pandas allows you to focus on the core part of the code. So, it provides clear and concise code for the user.
 series is defined as a one-dimensional array that is capable of storing various data types. The row labels of the series are called the index. We can easily convert the list, tuple, and dictionary into series using the "series’ method. A Series cannot contain multiple columns. It has one parameter:
 * Data: It can be any list, dictionary, or scalar value.
-##### creating Series from Array:
+##### Creating Series from Array:
 Before creating a Series, Firstly, we have to import the NumPy module and then use the array() function in the program
 
 REVIEW BY CHARAN 
