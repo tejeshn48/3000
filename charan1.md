@@ -1,11 +1,11 @@
 
 # Jenkins
 
-Agile teams produce workable and robust code in each iteration. All that code if built and evaluated returns a lot of conflicts bugs and errors. Developers needs to solve those conflict and issues before moving to the next iteration. the more programmers are sharing the code, the more problematic this is for these reasons, agile teams often, therefore, choose to use continuous integration. Some terminologies before we begin. Source code All the code that developers write to create the software is called source code.
+Agile teams produce workable and robust code in each iteration. All that code if built and evaluated returns a lot of conflicts bugs and errors. Developers needs to solve those conflict and issues before moving to the next iteration. The more programmers are sharing the code, the more problematic this is for these reasons, agile teams often, therefore, choose to use continuous integration. Some terminologies before we begin. Source code all the code that developers write to create the software is called source code.
 
 ### The Build Process
 
-It is a process by which source code is converted into a stand-alone form that can be run on a computer. For example, a source code written to develop windows software when built will create an **A.jar. or ear or .msi file**. Another example is if a java source code is built it may create **A.jar. or ear file**.This is deployable manually. But some build tools make the developer's life easy when it comes to building artifact or even deploying it. These are called build automation tools.
+It is a process by which source code is converted into a stand-alone form that can be run on a computer. For example, a source code written to develop windows software when built will create an **A.jar. or ear or .msi file**. Another example is if a java source code is built it may create **A.jar. or ear file**. This is deployable manually. But some build tools make the developer's life easy when it comes to building artifact or even deploying it. These are called build automation tools.
 
 ### There are some build tools:
 
@@ -17,7 +17,7 @@ It is a process by which source code is converted into a stand-alone form that c
 
 ### The unit testing 
 
-Unit testing simply verifying the individual unit of code (*mostly functions*) works as expected. The developer along with writing the code will the test cases that can be executed at the build time. Some test cases can be automatically generated. The objective of unit testing is to isolate a section of code (*unit*) and verify its correctness What is continuous integration Continuous integration (*ci*) is the process of automating the build and testing of code every time a team member commits changes to version control .ci encourages version control repository after every small task completion. Committing code triggers an automated build system to grab the latest code from the shared repository and to build, test, and validate the full master branch (*also known as the trunk or main*). The problem
+Unit testing simply verifying the individual unit of code (*mostly functions*) works as expected. The developer along with writing the code will the test cases that can be executed at the build time. Some test cases can be automatically generated. The objective of unit testing is to isolate a section of code (*unit*) and verify its correctness What is continuous integration Continuous integration (*ci*) is the process of automating the build and testing of code every time a team member commits changes to version control. Continous intergation encourages version control repository after every small task completion. Committing code triggers an automated build system to grab the latest code from the shared repository and to build, test, and validate the full master branch (*also known as the trunk or main*). The problem
 Developers will the code and verify it locally they push it to their local system. Once developers test the code and verify it locally, they push it to a centralized repository like GitHub. Similarly, all the developers would be pushing their code to the version control system several times a day. Developers would be pushing code and keep writing the code until they finish a particular task or project. Now all the code which developers have pushed into the version control systems if built and tested will return lots & lots of conflicts, and errors due to the failure of the build.
 
 ### The solution
@@ -32,10 +32,10 @@ It is as open source there is a lot of contribution all around the world to the 
 
 Jenkins comes with a lot of goodies but is just not limited by that, Jenkin's main power is its extensibility which can be achieved by installing plugins into it. Jenkins opensource community has written more number of plugins, these plugins can do a variety of tasks, like integration with external tools or servers they are:
 - Version control system plugins: - git, svn, subversion, etc
-- Build plugins: - maven, ant, Ms build, etc
-- Notification plugins: - Email, chat, SMS, etc
--  Cloud plugins: - create a cloud instance and deploy the code into the cloud service
--  Testing plugins: -code analysis will be a unit test case and static code analysis etc
+- Build plugins: - Maven, Ant, Ms build, etc
+- Notification plugins: - Email, Chat, SMS, etc
+-  Cloud plugins: - Create a cloud instance and deploy the code into the cloud service.
+-  Testing plugins: -Code analysis will be a unit test case and static code analysis etc.
 The list of plugins is very long, whenever we want Jenkins to do some tasks just search for that plugin, and most of the time, we will find something. For example, if we want Jenkins to deploy a java artifact to the tomcat server, search for the plugin named “deploy to container”.
 
 ### Jenkins setup
@@ -46,7 +46,7 @@ Jenkins can be installed on windows Browse to the official Jenkins download page
 
 A system running Windows 10
 The latest copy of Java Development Kit or Java Runtime Environment installed
-Access to an account with administrator privileges
+Access to an account with administrator privileges.
 
 ### Install Jenkins on Windows
 
@@ -56,7 +56,7 @@ Access to an account with administrator privileges
 - The setup wizard starts. Click Next to proceed.
 - Select the install destination folder and click Next to continue.
 - Under the Run service as a local or domain user option, enter the domain username and password for the user account you want to run Jenkins with. Click Test Credentials to verify the login data, then click next to proceed. Using the Run service as a Local system option doesn’t require you to enter user login data. Instead, it grants Jenkins full access to your system and services. Note that this is a less secure option and is thus not recommended. Note: When selecting the run service as a local or domain user, the user in question must have the required permission to log on as a service. If this is not the case, an error message stating the account cannot be verified appears. In the event of this error, perform the following steps to resolve the issue:
-- Make sure you are logge
+- Make sure you are logge.
 - D in as a user with administrative privileges.
 - In the Administrative Tools, open Local Security Policy.
 - In the Local Security Policy window, expand Local Policy in the left-hand panel and select User Rights Assignment.
@@ -72,7 +72,7 @@ Access to an account with administrator privileges
 - In your web browser, navigate to the port number you selected during the installation using the following address:
 - Navigate to the location on your system specified by the Unblock Jenkins page. 
 - The Unblock Jenkins page may point to a hidden directory. In case you cannot find the directory, make sure you enable viewing hidden items.
--	Open the InitialAdminPassword 
+-	Open the InitialAdminPassword.
 	 
 File using a text editor such as Notepad.
 Copy the password from the InitialAdminPassword: *****@#
